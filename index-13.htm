@@ -1,0 +1,1082 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Центральная избирательная комиссия Российской Федерации</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/bitrix/js/main/core/css/core.css?14821812008964" type="text/css"  rel="stylesheet" />
+<link href="/local/templates/cikrf_v2_default/assets/vendor/select2/select2.min.css?158973927217429" type="text/css"  rel="stylesheet" />
+<link href="/local/templates/cikrf_v2_default/assets/vendor/bootstrap/css/bootstrap.min.css?1589739273121200" type="text/css"  rel="stylesheet" />
+<link href="/local/templates/cikrf_v2_default/assets/vendor/viewbox/viewbox.css?15897392722692" type="text/css"  rel="stylesheet" />
+<link href="/assets/css/cikrf/style.css?162090374849462" type="text/css"  rel="stylesheet" />
+<link href="/assets/js/vestnik/plugins/jquery-bxslider/jquery.bxslider.css?15897393523737" type="text/css"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1640798843','SERVER_TZ_OFFSET':'10800','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'4ce527c9648ff34909400aaf9eeb7061','SITE_ID':'s1'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?148218120078911"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?148218120030654"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?14821812002880"></script>
+
+<script type="text/javascript">
+bxSession.Expand(1800, '4ce527c9648ff34909400aaf9eeb7061', false, '88a3cf03ead06ad74752c6baf48024a2');
+</script>
+
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/vendor/jquery-1.12.4.min.js?158973927297163"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/vendor/select2/select2.min.js?158973927266689"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/vendor/bootstrap/js/bootstrap.min.js?158973927237045"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/vendor/uhpv-full.min.js?15897392724588"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/vendor/viewbox/jquery.viewbox.min.js?15897392724871"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/js/functions.js?15897392722813"></script>
+<script type="text/javascript" src="/assets/js/ga.js?1589739352493"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/js/echarts.js?16310940073271239"></script>
+<script type="text/javascript" src="/local/templates/cikrf_v2_default/assets/js/home.js?1589739272266"></script>
+<script type="text/javascript" src="/assets/js/vestnik/plugins/jquery-bxslider/jquery.bxslider.min.js?158973935223628"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <!--meta name="viewport" content="width=1199"-->
+    <style>
+        #hpvgd, .h-mdiv, .h-mdiv2, .h-ldiv, .h-rdiv {
+            background: #EAEAEA;
+            color: #6D6D6D;
+        }
+
+        #hpvgd {
+            width: 100%;
+            z-index: 100;
+            width: 100%;
+            border-bottom: 2px solid rgb(230, 230, 230);
+        }
+
+        .h-mdiv {
+            display: none;
+            position: relative;
+            margin: auto;
+            text-alegn: center;
+        }
+
+        .h-mdiv2 {
+            display: none;
+            position: fixed;
+            margin: auto;
+            text-alegn: center;
+            width: 400px;
+            height: 200px;
+        }
+
+        .h-ldiv {
+            float: left;
+            padding: 7px 10px 7px 0px;
+        }
+
+        .h-rdiv {
+            position: absolute;
+            top: 7px;
+            right: 0px;
+            text-align: right;
+        }
+
+        .h-ni {
+            display: none !important;
+        }
+
+        a.hcmaf {
+            color: red;
+            margin-left: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        a.h-anl {
+            color: #2a72cc;
+        }
+
+        a.h-al {
+            color: #ED664B;
+        }
+
+        .h-fi {
+            font-weight: bold;
+            border-radius: 50%;
+            padding: 0px 8px;
+            margin-right: 5px;
+            font-size: 19px;
+        }
+
+        .h-background-1 {
+            color: #fff !important;
+            background: #000 !important;
+        }
+
+        .h-background-2 {
+            color: #000 !important;
+            background: #fff !important;
+        }
+
+        .h-background-1 label {
+            color: #fff !important;
+        }
+
+        .h-background-2 label {
+            color: #000 !important;
+        }
+
+        .h-background-2 #uhvb,
+        .h-background-1 #uhvb {
+            display: none;
+        }
+
+        .home .header_menu > li .menu_item .link.h-background-1,
+        .home .header_menu > li .menu_item .link.h-background-2 {
+            padding-top: 0;
+        }
+
+        .home .header_menu.h-background-1,
+        .home .header_menu.h-background-2 {
+            height: 60px;
+        }
+       .id-main {
+       display: none !important;
+        }
+       .id-main-no {
+       display: block !important;
+        }
+       .id-main-mob {
+       display: none !important;
+        }
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter50680165 = new Ya.Metrika2({
+                        id: 50680165,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks2");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/50680165" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body class="home">
+
+
+<header class="header">
+        <div class="desktop">
+        <div class="header_row1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 settings col-md-push-6">
+                        <ul class="settings_list">
+                            <li class="special_version"><a id="uhvb" href="javascript:void(0);" onclick="uvcl()">Версия
+                                    для слабовидящих</a></li>
+                            <li class="rss_block"><a href="/rss/">RSS</a></li>
+                            <li class="en_ru"><a href="/eng/">English version</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-6 search col-md-pull-6">
+                        <div
+                            class="input-group"><form action="/search/index.php">
+	<input class="form-control" placeholder="Поиск по сайту" type="text" name="q" size="15">
+	<input name="s" type="hidden" value="Поиск по сайту">
+	<button class="btn" type="submit"></button>
+</form></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_row2">
+            <div class="container">
+                <nav class="row">
+                    <ul id="menu" class="header_menu top_nav_ico">
+                        <li class="menu_item_li" data-name="menu1">
+                            <div class="menu_item"><!--меню-->
+                                <img src="/local/templates/cikrf_v2_default/assets/images/nav1_new.png" alt="">
+                                <span class="link nav1">Избиратели</span>
+                            </div>
+                        </li>
+                        <li class="menu_item_li" data-name="menu2">
+                            <div class="menu_item">
+                                <img src="/local/templates/cikrf_v2_default/assets/images/nav2_new.png" alt="">
+                                <span class="link nav2">Кандидаты и партии</span>
+                            </div>
+                        </li>
+                        <li class="menu_item_li" data-name="menu3">
+                            <div class="menu_item">
+                                <img src="/local/templates/cikrf_v2_default/assets/images/nav3_new.png" alt="">
+                                <span class="link nav3">Избирательные комиссии</span>
+                            </div>
+                        </li>
+                        <li class="menu_item_li" data-name="menu4">
+                            <div class="menu_item">
+                                <img src="/local/templates/cikrf_v2_default/assets/images/nav4_new.png" alt="">
+                                <span class="link nav4">СМИ</span>
+                            </div>
+                        </li>
+                        <li class="menu_item_li" data-name="menu5">
+                            <div class="menu_item">
+                                <img src="/local/templates/cikrf_v2_default/assets/images/nav5_new.png" alt="">
+                                <span class="link nav5">Наблюдатели и эксперты</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="popup_menu" class="header_popup_menu">
+                        <li class="popup_menu_item_li" data-name="menu1">
+                            <div class="popup_menu_item">
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico2" href="/reception/personal/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav1.png" alt=""> Общественная
+                                        приемная ЦИК России</span></a>
+						<ul class="link_list2">
+                                        <li><a href="/reception/docs/interesting/">Избиратели спрашивают – ЦИК
+                                                отвечает</a></li>
+                                        <li>
+                                            <a href="/reception/porjadok.php">Электронная форма обращения</a></li>
+                                        
+                                    </ul>
+				
+									
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico3" target="" href="/digital-services/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/digital_icon2.png" alt=""> Цифровые сервисы ЦИК России</span></a>
+						<!--<ul class="link_list2">
+                                        <li><a href="/digital-services/naydi-sebya-v-spiske-izbirateley/">Найди себя в списке избирателей </a></li>
+                                        <li>
+                                            <a href="/digital-services/naydi-svoy-izbiratelnyy-uchastok/">Найди свой избирательный участок</a></li>
+                                        <li>
+                                            <a href="/digital-services/vybory-i-referendumy/">Информация о выборах и референдумах </a></li>
+                                        
+                                    </ul>-->
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a href="" class="mini_title popup_menu_border2"></a>
+                                    <a href="/izbiratel/quantity/" class="mini_title popup_menu_border2" style="padding-top: 21px; padding-bottom: 21px;">Численность избирателей</a>
+                                     <a href="/reception/pamyatki-dlya-izbirateley/" class="mini_title popup_menu_border2"
+                                       style="padding-top: 21px; padding-bottom: 21px;">Памятки для избирателей</a>
+                                       <a href="/personal/profile/"  class="mini_title popup_menu_border2"
+                                       style="padding-top: 21px ;padding-bottom: 21px;">Личный кабинет избирателя</a>
+                                    <a href="" class="mini_title popup_menu_border2"></a>                                       
+                                   
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="mini_title popup_menu_border"
+                                       style="padding-bottom: 15px; margin-top: 0px"
+                                       href="/reception/dlya-otdelnykh-kategoriy-izbirateley/">Для отдельных категорий
+                                        избирателей</a>
+                                    <ul class="link_list">
+                                        <li><a href="/reception/dlya-otdelnykh-kategoriy-izbirateley/pravo_invalida/">Избирательные
+                                                права инвалидов</a></li>
+                                        <li>
+                                            <a href="/reception/dlya-otdelnykh-kategoriy-izbirateley/izbiratelnye-prava-voennosluzhashchikh/">Избирательные
+                                                права военнослужащих</a></li>
+                                        <li><a href="/reception/dlya-otdelnykh-kategoriy-izbirateley/za-rubezhom/">Избирательные
+                                                права граждан России за рубежом</a></li>
+
+                                    </ul>
+
+
+                                    <a class="mini_title popup_menu_border" style="padding-top: 5px;"
+                                       href="/reception/dlya-otdelnykh-kategoriy-izbirateley/mobilnii-izbiratel/">«Мобильный
+                                        избиратель»</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="popup_menu_item_li" data-name="menu2">
+                            <div class="popup_menu_item">
+                                <div class="col-xs-12 col-sm-3">
+                                     <!--<a class="link_ico" href="/politparty/MinUst/last/">
+									<span style="font-size:15px;">
+										<img src="/local/templates/cikrf_v2_default/assets/images/sub_nav3.png" alt=""> Политические партии, имеющие право участвовать в выборах</span></a>-->
+                                   <a class="link_ico" href="/politparty/interaktivnyy-spravochnik/">
+									<span style="font-size:15px;">
+										<img src="/local/templates/cikrf_v2_default/assets/images/sub_nav3.png" alt=""> Интерактивный справочник «Политические партии в <br/>Российской Федерации»</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+
+                                    <a class="link_text popup_menu_border" href="/politparty/MinUst/last/">Политические партии, имеющие право участвовать в выборах</a>
+                                    <a class="link_text popup_menu_border" href="/politparty/spisok/">Сведения о
+                                        политических партиях, выдвижение которыми кандидатов, списков кандидатов не
+                                        требует сбора подписей избирателей</a>
+                                    <a class="link_text popup_menu_border" href="/politparty/ustavy-i-programmy/">Уставы
+                                        зарегистрированных политических партий</a>
+                                  
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                        <a class="link_text popup_menu_border" href="/politparty/biluten/">Бюллетень «Региональные выборы. Партийная динамика»</a>
+            <!--                        
+                                        <a href="/politparty/biluten/" class="mini_title">Справочники и бюллетени</a>
+                               <ul class="popup_menu_border link_list">
+                                        <li><a href="/politparty/biluten/spravochniki/">Справочник «Политические партии
+                                                в Российской Федерации»</a></li>
+                                        <li><a href="/politparty/biluten/byulleteni/">Бюллетень «Региональные выборы:
+                                                партийная динамика»</a></li>
+                                    </ul>
+            -->
+                                  <a href="/politparty/pravila-politicheskoy-agitatsii/garant/"
+                                       class="link_text popup_menu_border" style="padding-top: 25px;padding-bottom: 25px;">Учет объема эфирного времени</a>
+  <a class="link_text popup_menu_border" href="/politparty/finance/">Финансовые
+                                        отчеты</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a href="/politparty/uchastie-v-vyborakh/" class="mini_title">Участие политических
+                                        партий в выборах</a>
+                                    <ul class="popup_menu_border link_list">
+                                        <li><a href="/politparty/uchastie-v-vyborakh/elect_president/">Сведения об
+                                                участии партий в федеральных выборах</a></li>
+                                        <li><a href="/politparty/uchastie-v-vyborakh/perechni-i-formy-dokumentov/">Перечни
+                                                и формы документов для участия в выборах</a></li>
+                                        <li><a href="/politparty/uchastie-v-vyborakh/method/">Методические рекомендации
+                                                по выдвижению и регистрации кандидатов</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popup_menu_item_li" data-name="menu3">
+                            <div class="popup_menu_item">
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico"
+                                       href="/izbiratelnym-komissiyam/sroki-formirovaniya-iksrf/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav6.png" alt=""> Сведения о формировании избирательных комиссий субъектов Российской Федерации</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico" href="http://vestnik.cikrf.ru/vestnik/"
+                                       target="_blank"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav7.png" alt=""> Новости регионов</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico"
+                                       href="/izbiratelnym-komissiyam/spravochno-metodicheskie-materialy/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav8.png" alt=""> Справочно-методические материалы</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <div class="search region">
+                                        <div class="input-group">
+                                            <div class="cec-select">
+                                                <select tabindex="-1" class="select2-hidden-accessible"
+                                                        aria-hidden="true"><option></option><option value="http://www.adygei.izbirkom.ru">Республика Адыгея (Адыгея)</option><option value="http://www.altai-rep.izbirkom.ru">Республика Алтай</option><option value="http://www.bashkortostan.izbirkom.ru">Республика Башкортостан</option><option value="http://www.buriat.izbirkom.ru">Республика Бурятия</option><option value="http://www.dagestan.izbirkom.ru">Республика Дагестан</option><option value="http://www.ingush.izbirkom.ru">Республика Ингушетия</option><option value="http://www.kabardin-balkar.izbirkom.ru"> Кабардино-Балкарская Республика</option><option value="http://www.kalmyk.izbirkom.ru">Республика Калмыкия</option><option value="http://www.karachaev-cherkess.izbirkom.ru/">Карачаево-Черкесская Республика</option><option value="http://www.karel.izbirkom.ru">Республика Карелия</option><option value="http://www.komi.izbirkom.ru">Республика Коми</option><option value="http://www.crimea.izbirkom.ru">Республика Крым</option><option value="http://www.mari-el.izbirkom.ru">Республика Марий Эл</option><option value="http://www.mordov.izbirkom.ru">Республика Мордовия</option><option value="http://www.yakut.izbirkom.ru">Республика Саха (Якутия)</option><option value="http://www.n-osset-alania.izbirkom.ru">Республика Северная Осетия - Алания</option><option value="http://www.tatarstan.izbirkom.ru">Республика Татарстан (Татарстан)</option><option value="http://www.tyva.izbirkom.ru">Республика Тыва</option><option value="http://www.udmurt.izbirkom.ru">Удмуртская Республика</option><option value="http://www.khakas.izbirkom.ru">Республика Хакасия</option><option value="http://www.chechen.izbirkom.ru">Чеченская Республика</option><option value="http://www.chuvash.izbirkom.ru">Чувашская Республика - Чувашия</option><option value="http://www.altai-terr.izbirkom.ru">Алтайский край</option><option value="http://www.zabkray.izbirkom.ru">Забайкальский край</option><option value="http://www.kamchatka-krai.izbirkom.ru">Камчатский край</option><option value="http://www.krasnodar.izbirkom.ru">Краснодарский край</option><option value="http://www.krasnoyarsk.izbirkom.ru">Красноярский край</option><option value="http://www.permkrai.izbirkom.ru">Пермский край</option><option value="http://www.primorsk.izbirkom.ru">Приморский край</option><option value="http://www.stavropol.izbirkom.ru">Ставропольский край</option><option value="http://www.khabarovsk.izbirkom.ru">Хабаровский край</option><option value="http://www.amur.izbirkom.ru">Амурская область</option><option value="http://www.arkhangelsk.izbirkom.ru">Архангельская область</option><option value="http://www.astrakhan.izbirkom.ru">Астраханская область</option><option value="http://www.belgorod.izbirkom.ru">Белгородская область</option><option value="http://www.bryansk.izbirkom.ru"> Брянская область</option><option value="http://www.vladimir.izbirkom.ru"> Владимирская область</option><option value="http://www.volgograd.izbirkom.ru">Волгоградская область</option><option value="http://www.vologod.izbirkom.ru">Вологодская область</option><option value="http://www.voronezh.izbirkom.ru">Воронежская область</option><option value="http://www.ivanovo.izbirkom.ru">Ивановская область</option><option value="http://www.irkutsk.izbirkom.ru">Иркутская область</option><option value="http://www.kaliningrad.izbirkom.ru">Калининградская область</option><option value="http://www.kaluga.izbirkom.ru">Калужская область</option><option value="http://www.kemerovo.izbirkom.ru">Кемеровская область - Кузбасс</option><option value="http://www.kirov.izbirkom.ru">Кировская область</option><option value="http://www.kostroma.izbirkom.ru">Костромская область</option><option value="http://www.kurgan.izbirkom.ru">Курганская область</option><option value="http://www.kursk.izbirkom.ru">Курская область</option><option value="http://www.leningrad-reg.izbirkom.ru">Ленинградская область</option><option value="http://www.lipetsk.izbirkom.ru">Липецкая область</option><option value="http://www.magadan.izbirkom.ru">Магаданская область</option><option value="http://www.moscow-reg.izbirkom.ru">Московская область</option><option value="http://www.murmansk.izbirkom.ru">Мурманская область</option><option value="http://www.nnov.izbirkom.ru">Нижегородская область</option><option value="http://www.novgorod.izbirkom.ru">Новгородская область</option><option value="http://www.novosibirsk.izbirkom.ru">Новосибирская область</option><option value="http://www.omsk.izbirkom.ru">Омская область</option><option value="http://www.orenburg.izbirkom.ru">Оренбургская область</option><option value="http://www.orel.izbirkom.ru">Орловская область</option><option value="http://www.penza.izbirkom.ru">Пензенская область</option><option value="http://www.pskov.izbirkom.ru">Псковская область</option><option value="http://www.rostov.izbirkom.ru">Ростовская область</option><option value="http://www.ryazan.izbirkom.ru">Рязанская область</option><option value="http://www.samara.izbirkom.ru">Самарская область</option><option value="http://www.saratov.izbirkom.ru">Саратовская область</option><option value="http://www.sakhalin.izbirkom.ru">Сахалинская область</option><option value="http://www.sverdlovsk.izbirkom.ru">Свердловская область</option><option value="http://www.smolensk.izbirkom.ru">Смоленская область</option><option value="http://www.tambov.izbirkom.ru">Тамбовская область</option><option value="http://www.tver.izbirkom.ru">Тверская область</option><option value="http://www.tomsk.izbirkom.ru">Томская область</option><option value="http://www.tula.izbirkom.ru">Тульская область</option><option value="http://www.tyumen.izbirkom.ru">Тюменская область</option><option value="http://www.ulyanovsk.izbirkom.ru">Ульяновская область</option><option value="http://www.chelyabinsk.izbirkom.ru">Челябинская область</option><option value="http://www.yaroslavl.izbirkom.ru">Ярославская область</option><option value="http://www.moscow-city.izbirkom.ru">город Москва</option><option value="http://www.st-petersburg.izbirkom.ru">город Санкт-Петербург</option><option value="http://www.sevastopol.izbirkom.ru">город Севастополь</option><option value="http://www.jewish-aut.izbirkom.ru">Еврейская автономная область</option><option value="http://www.nenetsk.izbirkom.ru">Ненецкий автономный округ</option><option value="http://www.hmao.izbirkom.ru">Ханты-Мансийский автономный округ</option><option value="http://www.chukot.izbirkom.ru">Чукотский автономный округ</option><option value="http://www.yamal-nenetsk.izbirkom.ru">Ямало-Ненецкий автономный округ</option><option value="http://sirius.izbirkom.ru"> Федеральная территория "Сириус"</option></select>
+                                                <script>$(function () {
+                                                        $('.cec-select select').select2({
+                                                            placeholder: "Выберите территорию",
+                                                            "language": {
+                                                                "noMatches": function () {
+                                                                    return "Select a territory";
+                                                                }
+                                                            }
+                                                        }).change(function () {
+                                                            window.open($(this).val(), '_blank');
+                                                        });
+                                                    });</script>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <a href="/izbiratelnym-komissiyam/obuchenie/raspisanie/"
+                                       class="mini_title">Обучение</a>
+                                    <ul class="popup_menu_border link_list">
+                                        <li><a href="/izbiratelnym-komissiyam/obuchenie/raspisanie/">Расписание
+                                                обучения</a></li>
+                                        <li><a href="/izbiratelnym-komissiyam/obuchenie/raspisanie/arkhiv/">Архив
+                                                обучающих мероприятий</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popup_menu_item_li" data-name="menu4">
+                            <div class="popup_menu_item">
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico" href="/smi/kontakt.php"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav4.png" alt=""> Пресс-служба ЦИК России</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico" href="/smi/foto-i-videomaterialy/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav5.png" alt=""> Фото и видеоматериалы</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a href="/smi/akkreditatsiya-zhurnalistov/" class="mini_title"
+                                       style="text-decoration:none !important">Аккредитация журналистов</a>
+                                    <ul class="popup_menu_border link_list">
+                                        <li><a href="/smi/akkreditatsiya-zhurnalistov/dlya-raboty-na-vyborakh/">Аккредитация
+                                                представителей средств массовой информации на выборах, референдумах</a></li>
+                                        <li><a href="/smi/akkreditatsiya-zhurnalistov/dlya-raboty-v-infotsentre/">Аккредитация
+                                                для работы в Информационном центре ЦИК России</a></li>
+                                        <li><a href="/smi/akkreditatsiya-zhurnalistov/na-meropriyatiya/">Аккредитация на
+                                                мероприятия ЦИК России</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <ul class="popup_menu_border link_list">
+                                        <li><a href="/smi/brendbuk-i-geraldika/">Брендбук и геральдика</a></li>
+                                        <li><a href="/smi/informatsionnye-materialy/">Информационные материалы</a></li>
+
+                                    </ul>
+
+                                    <!--<a class="mini_title popup_menu_border" style="padding-top: 16px;"
+                                       href="/smi/competition/">Конкурс СМИ - 2019</a>-->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popup_menu_item_li" data-name="menu5">
+                            <div class="popup_menu_item">
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico"
+                                       href="/nablyudatelyam-i-ekspertam/publichnoe-obsuzhdenie/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav9.png" alt="">Публичное обсуждение</span></a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <a class="link_ico" href="/activity/konsultant/"><span><img
+                                                src="/local/templates/cikrf_v2_default/assets/images/sub_nav10.png" alt=""> Взаимодействие с экспертами<br />Консультативная площадка</span></a>
+                                </div>
+								<div class="col-xs-12 col-sm-3" style="margin-left: 0px; padding-right: 10px;">
+                                    <a href="/nablyudatelyam-i-ekspertam/obuchenie-nablyudateley/" class="mini_title">Обучение
+                                        наблюдателей</a>
+                                    <ul class="popup_menu_border link_list">
+                                        <li><a href="/nablyudatelyam-i-ekspertam/obuchenie-nablyudateley/">Анонсы</a>
+                                        </li>
+                                        <li>
+                                            <a href="/nablyudatelyam-i-ekspertam/obuchenie-nablyudateley/arkhiv/">Архив</a>
+                                        </li>
+                                    </ul>
+                                    <div style="height:10px;" class="overflow:hidden"></div>
+                                    <a href="/nablyudatelyam-i-ekspertam/metodicheskie-materialy/"
+                                       class="mini_title">Методические материалы</a>
+                                    <a href="/nablyudatelyam-i-ekspertam/meropriyatiya/" class="mini_title popup_menu_border">Мероприятия
+                                        ЦИК России</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-3" >
+                                    <div class="" style="height:160px; margin-right: -5px; margin-left: -5px; border: 1px solid #5c96bf;">
+                                    <div style="height:40px;" class="overflow:hidden"></div>
+									<!--	<a  style="padding-left:6px" href="/nablyudatelyam-i-ekspertam/analiz-soobscheniy-o-narusheniyakh/" class="mini_title popup_menu_border"><center>Информация об итогах анализа сообщений о предполагаемых нарушениях на выборах в единый день голосования 8 сентября 2019 года</center></a>	-->
+										<a  style="padding-left:6px" href="/nablyudatelyam-i-ekspertam/analiz-soobscheniy-o-narusheniyakh/" class="mini_title popup_menu_border"><center>Анализ сообщений о предполагаемых нарушениях на выборах</center></a>	
+                                    </div>
+                                    <!--<div class="search event" style="margin-top: 52px;">
+                                        <div class="input-group"><form action="/nablyudatelyam-i-ekspertam/obuchenie-nablyudateley/arkhiv/search/">
+	<input class="form-control" placeholder="Поиск обучающих мероприятий" type="text" name="q" size="15">
+	<input name="s" type="hidden" value="Поиск по сайту">
+	<button class="btn" type="submit"></button>
+</form>
+                                        </div>
+                                    </div>-->
+                              </div>
+							</div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="header_row3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 logo">
+                        <a href="/"><img src="/local/templates/cikrf_v2_default/assets/images/logo.png"
+                                                        alt="Центральная избирательная комиссия Российской Федерации"></a>
+                    </div>
+<div class="col-xs-12 col-sm-4 id-main" style="width:28,5%;margin-left: -8px;margin-top: 20px;"><a target="_blank" id="slogan" style="overflow:hidden;" href="https://map.rostelecom-cc.ru/" title="ТИК и УИК">
+				<img class="mini_border_img" src="/upload/img/tik_370х125_re.jpg">
+			</a></div><div class="col-xs-12 col-sm-4 id-main-no" style="width:28,5%;margin-left: -8px;margin-top: 20px;"></div>
+                    <div class="col-xs-12 col-sm-3 header_phone" style="width:28,5%;margin-left: -8%;">
+                        <!--<a href="/analog/hot_line.php"><img src="tik.jpg"></a>-->
+
+
+<!--<a  style="margin-top:17px !important; background: transparent url(../images/) left center no-repeat;" href="/analog/hot_line.php" class="link">
+<img class="" src="/upload/img/ISC_265х125.jpg"  />
+<span class="text"><div align="center"><font size="4px">Информационно-справочный центр<br/> «Горячая линия»</font></div></span> 
+<span class="tel"><div align="center" >8-800-200-00-20</div><div align="center" style="margin-top: 5px">+7-499-754-00-20</div><div align="center" style="margin-top: -10px"><font color="#31404b" size="2px" style="font-weight: normal;">(для звонков из-за рубежа)</font></div></span>
+
+</a>
+
+<!--<a href="/analog/hot_line.php" class="link">
+	<span class="text"><div align="center">Работает «горячая линия»</div></span> 
+	<span class="tel"><div align="center">+7 (495) 606-98-88</div></span> 	
+</a>-->
+
+<a  style="margin-top:17px !important; background: transparent url(../images/) left center no-repeat;" href="/analog/hot_line.php" class="link">
+<img class="" src="/upload/img/hot_line_265х82.jpg"  />
+
+</a>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile"><!--копия шапки для мобилки-->
+        <div class="col-xs-12">
+            <div class="open_logo">
+                <a href="javascript:void(0);" class="open_bm_nav" id="open_bm_nav"></a>
+                <a href="/"><img src="/local/templates/cikrf_v2_default/assets/images/mb_logo_close.png"
+                                                alt="Центральная избирательная комиссия Российской Федерации"></a>
+            </div>
+        </div>
+        <div class="mb_nav">
+            <div class="close_logo">
+                <a href="/"><img src="/local/templates/cikrf_v2_default/assets/images/mb_logo_open.png"
+                                                alt="Центральная избирательная комиссия Российской Федерации"></a>
+                <a href="javascript:void(0);" class="close_bm_nav" id="close_bm_nav"></a>
+            </div>
+            <div class="search">
+                <div class="input-group"><form action="/search/index.php">
+	<input class="form-control" placeholder="Поиск по сайту" type="text" name="q" size="15">
+	<input name="s" type="hidden" value="Поиск по сайту">
+	<button class="btn" type="submit"></button>
+</form></div>
+            </div>
+            <div class="mb_header_row1">
+                <ul>
+                    <li class="special"><a id="uhvb" href="#" onclick="uvcl()">Версия для слабовидящих</a></li>
+                    <li class="en_ru"><a href="/eng/">English version</a></li>
+                    <li class="phone">
+                                                    <a href="tel:+74956069888">Работает «горячая линия» +7 (495) 606-98-88</a>
+                                            </li>
+
+                </ul>
+            </div>
+            <nav class="mb_header_row2">
+                <ul class="header_menu_mb top_nav_ico">
+                    <li><a href="/digital-services/" class="link nav0">Цифровые сервисы информирования избирателей</a>
+                    </li>
+                    <li><a href="/izbiratel/" class="link nav1">Избиратели</a></li>
+                    <li><a href="/politparty/" class="link nav2">Кандидаты и партии</a></li>
+                    <li><a href="/izbiratelnym-komissiyam/sroki-formirovaniya-iksrf/" class="link nav3">Избирательные
+                            комиссии</a></li>
+                    <li><a href="/smi/kontakt.php" class="link nav4">СМИ</a></li>
+                    <li><a href="/nablyudatelyam-i-ekspertam/publichnoe-obsuzhdenie/" class="link nav5">Наблюдатели и
+                            эксперты</a></li>
+                </ul>
+            </nav>
+            <div class="mb_header_row3">
+               <!-- <a class="link_text popup_menu_border" href="/analog/ediny-den-golosovaniya-2019/kategorii-viborov/">Единый
+                    день голосования 8 сентября 2019 года</a>-->
+                <a class="link_text popup_menu_border" href="/about/">О комиссии</a>
+                <a class="link_text popup_menu_border" href="/activity/relevant/">Деятельность ЦИК России</a>
+                <a class="link_text popup_menu_border" href="http://cikrf.ru/personal/profile/">Личный кабинет
+                    избирателя</a>
+                <a class="link_text popup_menu_border" href="/digital-services/naydi-svoy-izbiratelnyy-uchastok/" >Найди
+                    свой избирательный участок</a>
+                <a class="link_text popup_menu_border" href="/digital-services/naydi-sebya-v-spiske-izbirateley/" >Найди
+                    себя в списке избирателей</a>
+                <a class="link_text popup_menu_border" href="/law/constitution.php">Избирательное законодательство</a>
+                <a class="link_text popup_menu_border" href="http://www.izbirkom.ru/region/izbirkom">Информация о
+                    выборах и референдумах</a>
+
+                                    <a class="link_text popup_menu_border" href="/vid/">Видеотрансляции заседаний ЦИК России</a> 
+                
+
+            </div>
+        </div>
+    </div>
+<div class="visible-xs-block header_row3">
+			<div class="id-main-mob"><a target="_blank" id="slogan" style="overflow:hidden;" href="https://map.rostelecom-cc.ru/" title="ТИК и УИК">
+				<img class="mini_border_img" src="/upload/img/tik_370х125_re.jpg">
+			</a></div></div>
+		</div>
+    <div class="visible-xs-block header_row3">
+        <div class="header_phone">
+            <!--<a href="/analog/hot_line.php"><img src="tik.jpg"></a>-->
+
+
+<!--<a  style="margin-top:17px !important; background: transparent url(../images/) left center no-repeat;" href="/analog/hot_line.php" class="link">
+<img class="" src="/upload/img/ISC_265х125.jpg"  />
+<span class="text"><div align="center"><font size="4px">Информационно-справочный центр<br/> «Горячая линия»</font></div></span> 
+<span class="tel"><div align="center" >8-800-200-00-20</div><div align="center" style="margin-top: 5px">+7-499-754-00-20</div><div align="center" style="margin-top: -10px"><font color="#31404b" size="2px" style="font-weight: normal;">(для звонков из-за рубежа)</font></div></span>
+
+</a>
+
+<!--<a href="/analog/hot_line.php" class="link">
+	<span class="text"><div align="center">Работает «горячая линия»</div></span> 
+	<span class="tel"><div align="center">+7 (495) 606-98-88</div></span> 	
+</a>-->
+
+<a  style="margin-top:17px !important; background: transparent url(../images/) left center no-repeat;" href="/analog/hot_line.php" class="link">
+<img class="" src="/upload/img/hot_line_265х82.jpg"  />
+
+</a>        </div>
+    </div>
+
+
+</header><style>
+.id-main {display: none !important;
+}
+.id-main-no {display: block !important;
+}
+.id-main-mob {display: none !important;
+}
+</style>
+
+ <section class="content_magrin">
+ 
+ 
+   
+<div class="container"> 	 	 
+  <div class="banner_none" style="display: flex;"> 		 		 
+
+	  <!--<div class="" style="display: flex;"> 			<a id="slogan" style="overflow:hidden;" href="/analog/ediny-den-golosovaniya-2020/" title="Единый день голосования 13 сентября 2020 года" > 				<img class="mini_border_img" src="/upload/img/EDG_650х125.jpg"  /> 			</a> 		</div>--><!-- k-svedeniyu-smi/informacionnii-centr-cik-rossii.php -->
+
+
+	  
+	  
+	  <div class="" style="display: flex;"> 			<a id="slogan" style="overflow:hidden;" 
+
+href="/digital-services/" title="Цифровые сервисы избирателя"> 				
+
+<img class="mini_border_img" src="/upload/img/cifrovie_servici_1849x125.jpg"> 			</a> 		</div>
+	  
+	  
+	  
+	  
+										  <!-- BEST FOR EDG -->
+<!--	  
+	  <div class="" style="display: flex;"> 			<a id="slogan" style="overflow:hidden;" 
+
+href="/analog/ediny-den-golosovaniya-2021/p_itogi/" title="Единый день голосования 19 сентября 2021 года"> 				
+
+<img class="mini_border_img" src="/upload/img/banner_site_1340x125_09-2021.jpg"> 			</a> 		</div> -->
+
+<!-- banner_site_650х125_2.jpg -->
+<!--
+    <div style="margin-left: 2%;"> 			<a target="_blank" id="slogan" style="overflow:hidden;" href="/digital-
+
+services/" title="Цифровые сервисы избирателя"> 				<img class="mini_border_img" 
+
+src="/upload/img/DS_313х125.jpg"> 			</a> 		</div>
+-->
+
+										  <!-- END BEST FOR EDG -->
+
+
+
+
+
+
+<!-- 
+ <div style="margin-left: 1%;"> <a id="bxid_512164" target="_blank" style="overflow:hidden;" href="https://map.rostelecom-
+
+cc.ru/" title="ТИК и УИК"> 				<img class="mini_border_img" src="/upload/img/TIK_313х125.jpg"> 		
+
+	</a> 		</div> 
+-->
+
+
+
+
+
+ <!--<div style="margin-left: 1%;"> <a id="bxid_512164" target="_blank" style="overflow:hidden;" href="https://map.rostelecom-cc.ru/" title="ТИК и УИК" > 				<img class="mini_border_img" src="/upload/img/TIK_313х125.jpg"  /> 			</a> 		</div>-->
+
+
+
+<!--<div style="margin-left: 2%;"> -->
+
+<!-- width:21% -->
+
+<!--
+			<a id="bxid_68154" href="/analog/ediny-den-golosovaniya-2020/" title="Единый день голосования 13 сентября 2020 года" >
+				<img id="bxid_851345" class="mini_border_img" src="/upload/img/EDG_2020_web_263х125_cikrf.jpg"  />
+			</a>
+		</div>-->
+ 	</div>
+<!--
+  <div style="display: flex;"> 
+    <div class="col-xs-12 col-sm-4" style="margin-left: 0px; margin-top: -320px; display: flex;"></div>
+
+    <div class="col-xs-12 col-sm-4" style="width: 100%; margin-left: 662px; margin-top: -320px; display: flex;"> 			<a id="bxid_512164" target="_blank" style="overflow:hidden;" href="https://map.rostelecom-cc.ru/" title="ТИК и УИК" > 				<img class="mini_border_img" src="/upload/img/tik_370х125_re.jpg"  /> 			</a> 		</div>
+   
+    <div class="col-xs-12 col-sm-4" style="margin-left: 1224px; margin-top: -320px; display: flex;"></div>
+   </div>
+-->
+ </div>
+ 
+<div class="container visible-xs-block header_row3">
+<!--	<div style=""> 			<a id="slogan" style="overflow:hidden;" href="/analog/ediny-den-golosovaniya-2021/p_itogi/" title="Единый день голосования 19 сентября 2021 года" > 				<img class="mini_border_img" src="/upload/img/banner_site_313x125_09-2021.jpg"  /> </a></div> -->  <!--banner_site_313х125_2(2).jpg-->  		
+	<!-- /informacionnii-centr-cik-rossii.php EDG_21_313х125.jpg-->
+
+    <div style=""> 			<a target="_blank" id="slogan" style="overflow:hidden;" href="/digital-services/" title="Цифровые сервисы избирателя" > 				<img class="mini_border_img" src="/upload/img/DS_313х125.jpg"  /> 			</a> 		</div><br />
+
+<!-- <div style=""> 			<a target="_blank" id="slogan" style="overflow:hidden;" href="https://map.rostelecom-cc.ru/" title="ТИК и УИК" > 				<img class="mini_border_img" src="/upload/img/TIK_313х125.jpg"  /> 			</a> 		</div><br />   
+-->
+
+<!--<div style=""> <a id="bxid_512164" target="_blank" style="overflow:hidden;" href="/izbiratelnym-komissiyam/sroki-formirovaniya-iksrf/sirius/" title="ТИК Сириус" > 				<img class="mini_border_img" src="/upload/img/tik_sirius_315х125_mob.jpg"  /> 			</a> 		</div>-->
+
+	</div>
+</section>
+
+
+ <style>
+
+.bx-wrapper {
+ max-width: 100%!important;
+}
+
+.bx-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.bx-pager {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.bx-pager-item {display: inline-block;}
+.bx-pager-link {
+  text-indent: -9999px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  outline: 0;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+a.active {background: white;}
+.bx-prev, .bx-next {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  background: white;
+  color: #666;
+  width: 50px;
+  height: 50px;
+  #opacity: 0;
+  text-align: center;
+  transition: opacity .5s ease-in-out;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.bx-wrapper:hover .bx-prev, .bx-wrapper:hover .bx-next, .bx-wrapper:hover .bx-prev:active, .bx-wrapper:hover .bx-next:active {opacity: 1;}
+.bx-prev {left: 20px;}
+.bx-next {right: 20px;}
+.bx-prev:before, .bx-next:before {
+  font-family: "FontAwesome";
+  font-size: 30px;
+  line-height: 50px;
+}
+.bx-prev:before {content: "\f104";}
+.bx-next:before {content: "\f105";}
+
+
+.bxslider .slide_area{
+ width: 100%!important;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	top: 42%!important;
+z-index: 50!important;
+		margin-top:-40px!important;
+}
+</style>
+
+<section class="home_content content_magrin"><div class="container"><div class="row">
+<div class="col-xs-12 col-sm-6 top_news">
+
+	<div class="bxslider">
+
+<div class="slide_area">	
+					<a href="/news/cec/51091/"><img src="/upload/resize_cache/iblock/918/650_430_2/kxhk6kmf_5main.jpg" alt="Состоялось 75-е заседание ЦИК России"> </a>
+		
+	<div class="news_info">
+		<div class="news_title">Главная новость</div>
+		<div class="news_text">
+			<div class="news_text_border">
+				
+				
+					<a style="font-size:20px;" href="/news/cec/51091/">Состоялось 75-е заседание ЦИК России <br><span>22.12.2021</span></a>
+							
+			</div>
+		</div>
+	</div></div>	
+<div class="slide_area">	
+					<a href="/news/cec/51052/"><img src="/upload/resize_cache/iblock/ef8/650_430_2/kx7p30np_10-main.jpg" alt="Состоялось 74-е заседание ЦИК России"> </a>
+		
+	<div class="news_info">
+		<div class="news_title">Главная новость</div>
+		<div class="news_text">
+			<div class="news_text_border">
+				
+				
+					<a style="font-size:20px;" href="/news/cec/51052/">Состоялось 74-е заседание ЦИК России <br><span>15.12.2021</span></a>
+							
+			</div>
+		</div>
+	</div></div>	
+<div class="slide_area">	
+					<a href="/news/cec/51027/"><img src="/upload/resize_cache/iblock/f7f/650_430_2/kx0coelz_7main.jpg" alt="Состоялось 73-е заседание ЦИК России"> </a>
+		
+	<div class="news_info">
+		<div class="news_title">Главная новость</div>
+		<div class="news_text">
+			<div class="news_text_border">
+				
+				
+					<a style="font-size:20px;" href="/news/cec/51027/">Состоялось 73-е заседание ЦИК России <br><span>10.12.2021</span></a>
+							
+			</div>
+		</div>
+	</div></div>	
+</div></div>
+
+	<script>
+$(function(){
+  $('.bxslider').bxSlider({
+    mode: 'fade',
+	useCSS: false,
+	pager: false,
+    captions: true,
+	controls: true,
+    slideWidth: 600,
+	touchEnabled: false
+  });
+});
+ </script>
+<div class="col-xs-12 col-sm-6 top_page_tabs"><ul class="nav nav-tabs">
+
+	<li class="active"><a href="#top_news" data-toggle="tab" style="padding: 10px 20px">Новости</a></li><li><a href="#top_annonce" data-toggle="tab" style="padding: 10px 20px">Анонсы</a></li>
+
+</ul><div class="tab-content"><div class="tab-pane active" id="top_news">
+<div class="top_news_list">
+
+<div class="top_news_item" id="bx_3099439860_51110">
+		<a href="/news/cec/51110/" class="text">Информация о предварительных результатах выборов в субъектах Российской Федерации 26 декабря 2021 года</a>
+
+
+
+	
+			<span class="date">27.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51088">
+		<a href="/news/cec/51088/" class="text">Перечень вопросов, включенных в протокол заседания Центральной избирательной комиссии Российской Федерации от 22 декабря 2021 года № 75</a>
+
+
+
+	
+			<span class="date">22.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51084">
+		<a href="/news/cec/51084/" class="text">Элла Памфилова: Концентрация вызовов диктует необходимость динамичной и адекватной реакции</a>
+
+
+
+	
+			<span class="date">21.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51082">
+		<a href="/news/cec/51082/" class="text">Евгений Шевченко посетил с рабочим визитом Нижегородскую область</a>
+
+
+
+	
+			<span class="date">20.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51081">
+		<a href="/news/cec/51081/" class="text">Павел Андреев принял участие в заседании Избирательной комиссии Тульской области</a>
+
+
+
+	
+			<span class="date">20.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51080">
+		<a href="/news/cec/51080/" class="text">В ЦИК России проходят обучающие мероприятия для впервые избранных председателей региональных избиркомов</a>
+
+
+
+	
+			<span class="date">20.12.2021</span>
+	</div></div>
+
+<div class="left_block"><a class="blue_link before_img list" href="/news/cec/">Все новости</a></div></div>
+
+
+<div class="tab-pane" id="top_annonce"><div class="top_news_list"><div class="top_news_item" id="bx_3099439860_51083">
+		<a href="/news/annonces/51083/" class="text">Проект повестки дня заседания ЦИК России № 75, назначенного на 22 декабря 2021 года в 11 часов 00 минут</a>
+		<span class="date">21.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51042">
+		<a href="/news/annonces/51042/" class="text">Проект повестки дня заседания ЦИК России № 74, назначенного на 15 декабря 2021 года в 11 часов 00 минут</a>
+		<span class="date">14.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_51017">
+		<a href="/news/annonces/51017/" class="text">Проект повестки дня заседания ЦИК России № 73, назначенного на 10 декабря 2021 года в 11 часов 00 минут</a>
+		<span class="date">09.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_50992">
+		<a href="/news/annonces/50992/" class="text">Проект повестки дня заседания ЦИК России № 72, назначенного на 8 декабря 2021 года в 11 часов 00 минут</a>
+		<span class="date">07.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_50931">
+		<a href="/news/annonces/50931/" class="text">Проект повестки дня заседания ЦИК России № 71, назначенного на 3 декабря 2021 года в 14 часов 00 минут</a>
+		<span class="date">02.12.2021</span>
+	</div><div class="top_news_item" id="bx_3099439860_50882">
+		<a href="/news/annonces/50882/" class="text">Александр Курдюмов примет участие в наблюдении за выборами в Венесуэле</a>
+		<span class="date">18.11.2021</span>
+	</div></div><div class="left_block"><a class="blue_link before_img list" href="/news/annonces/">Все анонсы</a></div></div><div class="tab-pane" id="top_ofitsialnyy-kommentariy"><div class="top_news_list"></div><div class="left_block"><a class="blue_link before_img list" href="/news/ofitsialnyy-kommentariy/">Все комментарии</a></div></div></div></div></div></div></section>
+ 
+
+
+<div class="container nav_block_content content_magrin"> 	 
+  <div class="popup_menu_item"> 		 
+    <div class="col-xs-12 col-sm-6 col-md-3">
+		<a class="link_text popup_menu_border" href="/about/" >О комиссии</a>
+		<a class="link_text popup_menu_border" href="/activity/relevant/" >Деятельность ЦИК России</a>
+		<a class="link_text popup_menu_border" href="/law/constitution.php" >Избирательное законодательство</a>
+		<a class="link_text popup_menu_border" href="/banners/vib_arhiv/" >Архив избирательных кампаний</a>
+		<a class="link_text popup_menu_border hidden-md hidden-lg" href="http://www.izbirkom.ru/region/izbirkom">Информация о выборах и референдумах</a>
+					<a class="link_text popup_menu_border hidden-md hidden-lg" href="/vid/">Видеотрансляции заседаний ЦИК России</a>
+
+			</div>
+   
+     
+    <div class="col-xs-12 col-sm-6 col-md-3 hidden-xs"> 			 
+      <div class="search"><form action="/activity/docs/search/"> 					 
+          <div class="input-group">
+			<input name="q" class="form-control" placeholder="Поиск по документам" type="text" />
+			<button class="btn" name="" type="submit"></button> 					</div>
+         
+          <div class="radio_check_list"> 
+            <div class="radio_check_item"><input name="doc-type[]" id="doc-type-19" value="postanovleniya" type="checkbox" /> <label for="doc-type-19">Постановления</label></div>
+           
+            <div class="radio_check_item"><input name="doc-type[]" id="doc-type-20" value="vypiski-iz-protokolov" type="checkbox" /> <label for="doc-type-20">Выписки из протоколов</label></div>
+          </div>
+         	</form></div>
+     <a class="link_text popup_menu_border before_img list_w" href="/activity/docs/" >Все документы ЦИК России</a></div>
+   
+    <div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm"><a class="link_ico" href="http://www.izbirkom.ru/region/izbirkom" target="_blank" ><span><img src="/assets/img/home/img7.png"  /> Информация о выборах и референдумах</span></a></div>
+   
+    <div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
+					<a class="link_ico" href="/vid/" ><span><img src="/assets/img/home/img8.png"  />
+			Видеотрансляции заседаний ЦИК России 
+			</span></a>
+			</div>
+	
+	
+	
+	
+	
+	
+	
+	
+   </div>
+</div>
+ 
+<div class="container content_magrin hidden-xs"> 	 
+
+
+
+	<div class="col-xs-12 col-md-9 col-lg-8"> 		 
+		<div class="row"> 			 
+			<div class="col-xs-12 col-sm-6  col-md-3 home_img_link">
+				<a href="http://vestnik.cikrf.ru/" target="_blank" >
+					<img src="/assets/img/home/img3.png" alt="Вестник"  />
+					<span class="span">Официальное сетевое издание Вестник ЦИК России</span>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 home_img_link">
+				<a href="http://www.rcoit.ru/" target="_blank" >
+					<img src="/assets/img/home/img4.png" alt="РЦОИТ"  />
+					<span class="span">Российский центр обучения избирательным технологиям при ЦИК России</span>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 home_img_link">
+				<a href="http://www.rfsv.ru/" target="_blank" >
+					<img src="/assets/img/home/img345.jpg" alt="Российский фонд свободных выборов"  />
+					<span class="span">Российский фонд свободных выборов</span>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 home_img_link">
+				<a href="/gas/" >
+					<img src="/assets/img/home/img_link.jpg" alt="Cистема &amp;ldquo;Выборы&amp;rdquo;"  />
+					<span class="span">Государственная автоматизированная система Российской Федерации &ldquo;Выборы&rdquo;</span>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 home_img_link">
+				<img src="/assets/img/home/img5.png"  />
+			</div>
+		</div>
+	</div>
+ 
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4"> 		 
+    <div class="row"> 			 
+      <div class="col-xs-12 top_select_block"> 				 
+        <div class="cec-select"><label class="top_select_title">Сайты избирательных комиссий</label> 			<select tabindex="-1" class="select2-hidden-accessible" aria-hidden="true"><option></option><option value="http://www.adygei.izbirkom.ru">Республика Адыгея (Адыгея)</option><option value="http://www.altai-rep.izbirkom.ru">Республика Алтай</option><option value="http://www.bashkortostan.izbirkom.ru">Республика Башкортостан</option><option value="http://www.buriat.izbirkom.ru">Республика Бурятия</option><option value="http://www.dagestan.izbirkom.ru">Республика Дагестан</option><option value="http://www.ingush.izbirkom.ru">Республика Ингушетия</option><option value="http://www.kabardin-balkar.izbirkom.ru"> Кабардино-Балкарская Республика</option><option value="http://www.kalmyk.izbirkom.ru">Республика Калмыкия</option><option value="http://www.karachaev-cherkess.izbirkom.ru/">Карачаево-Черкесская Республика</option><option value="http://www.karel.izbirkom.ru">Республика Карелия</option><option value="http://www.komi.izbirkom.ru">Республика Коми</option><option value="http://www.crimea.izbirkom.ru"> Республика Крым</option><option value="http://www.mari-el.izbirkom.ru">Республика Марий Эл</option><option value="http://www.mordov.izbirkom.ru">Республика Мордовия</option><option value="http://www.yakut.izbirkom.ru">Республика Саха (Якутия)</option><option value="http://www.n-osset-alania.izbirkom.ru">Республика Северная Осетия - Алания</option><option value="http://www.tatarstan.izbirkom.ru">Республика Татарстан (Татарстан)</option><option value="http://www.tyva.izbirkom.ru">Республика Тыва</option><option value="http://www.udmurt.izbirkom.ru">Удмуртская Республика</option><option value="http://www.khakas.izbirkom.ru">Республика Хакасия</option><option value="http://www.chechen.izbirkom.ru">Чеченская Республика</option><option value="http://www.chuvash.izbirkom.ru">Чувашская Республика - Чувашия</option><option value="http://www.altai-terr.izbirkom.ru">Алтайский край</option><option value="http://www.zabkray.izbirkom.ru">Забайкальский край</option><option value="http://www.kamchatka-krai.izbirkom.ru">Камчатский край</option><option value="http://www.krasnodar.izbirkom.ru">Краснодарский край</option><option value="http://www.krasnoyarsk.izbirkom.ru">Красноярский край</option><option value="http://www.permkrai.izbirkom.ru">Пермский край</option><option value="http://www.primorsk.izbirkom.ru">Приморский край</option><option value="http://www.stavropol.izbirkom.ru">Ставропольский край</option><option value="http://www.khabarovsk.izbirkom.ru">Хабаровский край</option><option value="http://www.amur.izbirkom.ru">Амурская область</option><option value="http://www.arkhangelsk.izbirkom.ru">Архангельская область</option><option value="http://www.astrakhan.izbirkom.ru">Астраханская область</option><option value="http://www.belgorod.izbirkom.ru">Белгородская область</option><option value="http://www.bryansk.izbirkom.ru"> Брянская область</option><option value="http://www.vladimir.izbirkom.ru"> Владимирская область</option><option value="http://www.volgograd.izbirkom.ru">Волгоградская область</option><option value="http://www.vologod.izbirkom.ru">Вологодская область</option><option value="http://www.voronezh.izbirkom.ru">Воронежская область</option><option value="http://www.ivanovo.izbirkom.ru">Ивановская область</option><option value="http://www.irkutsk.izbirkom.ru">Иркутская область</option><option value="http://www.kaliningrad.izbirkom.ru">Калининградская область</option><option value="http://www.kaluga.izbirkom.ru">Калужская область</option><option value="http://www.kemerovo.izbirkom.ru">Кемеровская область - Кузбасс</option><option value="http://www.kirov.izbirkom.ru">Кировская область</option><option value="http://www.kostroma.izbirkom.ru">Костромская область</option><option value="http://www.kurgan.izbirkom.ru">Курганская область</option><option value="http://www.kursk.izbirkom.ru">Курская область</option><option value="http://www.leningrad-reg.izbirkom.ru">Ленинградская область</option><option value="http://www.lipetsk.izbirkom.ru">Липецкая область</option><option value="http://www.magadan.izbirkom.ru">Магаданская область</option><option value="http://www.moscow-reg.izbirkom.ru">Московская область</option><option value="http://www.murmansk.izbirkom.ru">Мурманская область</option><option value="http://www.nnov.izbirkom.ru">Нижегородская область</option><option value="http://www.novgorod.izbirkom.ru">Новгородская область</option><option value="http://www.novosibirsk.izbirkom.ru">Новосибирская область</option><option value="http://www.omsk.izbirkom.ru">Омская область</option><option value="http://www.orenburg.izbirkom.ru">Оренбургская область</option><option value="http://www.orel.izbirkom.ru">Орловская область</option><option value="http://www.penza.izbirkom.ru">Пензенская область</option><option value="http://www.pskov.izbirkom.ru">Псковская область</option><option value="http://www.rostov.izbirkom.ru">Ростовская область</option><option value="http://www.ryazan.izbirkom.ru">Рязанская область</option><option value="http://www.samara.izbirkom.ru"> Самарская область</option><option value="http://www.saratov.izbirkom.ru"> Саратовская область</option><option value="http://www.sakhalin.izbirkom.ru"> Сахалинская область</option><option value="http://www.sverdlovsk.izbirkom.ru">Свердловская область</option><option value="http://www.smolensk.izbirkom.ru">Смоленская область</option><option value="http://www.tambov.izbirkom.ru">Тамбовская область</option><option value="http://www.tver.izbirkom.ru">Тверская область</option><option value="http://www.tomsk.izbirkom.ru">Томская область</option><option value="http://www.tula.izbirkom.ru">Тульская область</option><option value="http://www.tyumen.izbirkom.ru">Тюменская область</option><option value="http://www.ulyanovsk.izbirkom.ru">Ульяновская область</option><option value="http://www.chelyabinsk.izbirkom.ru">Челябинская область</option><option value="http://www.yaroslavl.izbirkom.ru">Ярославская область</option><option value="http://www.moscow-city.izbirkom.ru">город Москва</option><option value="http://www.st-petersburg.izbirkom.ru">город Санкт-Петербург</option><option value="http://www.sevastopol.izbirkom.ru"> город Севастополь</option><option value="http://www.jewish-aut.izbirkom.ru">Еврейская автономная область</option><option value="http://www.nenetsk.izbirkom.ru">Ненецкий автономный округ</option><option value="http://www.hmao.izbirkom.ru"> Ханты-Мансийский автономный округ</option><option value="http://www.chukot.izbirkom.ru"> Чукотский автономный округ</option><option value="http://www.yamal-nenetsk.izbirkom.ru"> Ямало-Ненецкий автономный округ</option><option value="http://sirius.izbirkom.ru"> Федеральная территория "Сириус"</option></select> </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </div><footer class="container footer">
+	<div class="row_footer">
+		<div style="text-align: center" class="visible-xs">
+			<a href="http://vestnik.cikrf.ru/" target="_blank"><img src="/assets/img/home/img3.png" alt="Вестник"> </a>
+		</div>
+		<div style="text-align: center" class="visible-xs">
+			<a href="http://www.rcoit.ru/"><img src="/assets/img/RZOIT.jpg" style="width: 25%;"></a>
+		</div>
+		<div style="text-align: center" class="visible-xs">
+			<a href="http://www.rfsv.ru/"><img src="/assets/img/home/img345.jpg"></a>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-3 footer_1">
+			<div class="footer_contacts">© ЦИК России<br>
+					109012, Москва, Б. Черкасский пер., д.9<br>
+				телефон: 					+7 (495) 606-98-88
+							</div>
+			<ul class="footer_social_list">
+				<li><a href="https://vk.com/cikrussia" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s1.png" alt=""></a></li>
+				<li><a href="https://ok.ru/cikrussia" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s2.png" alt=""></a></li>
+				<li><a href="http://www.facebook.com/CIKRussia" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s3.png" alt=""></a></li>
+				<li><a href="https://twitter.com/CIKRussia" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s4.png" alt=""></a></li>
+
+				<li><a href="https://www.youtube.com/cikrussia" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s6.png" alt=""></a></li>
+				<li><a href="https://www.instagram.com/cikrussia" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s7.png" alt=""></a></li>
+				<li><a href="https://t.me/cikrossii" target="_blank"><img src="/local/templates/cikrf_v2_default/assets/images/s5.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 footer_2">
+			<ul class="footer_menu">
+				<li><a href="/opendata/">Открытые данные</a></li>
+				<li><a href="/map/">Карта сайта</a></li>
+				<li><a href="http://www.gov.ru/" target="_blank">Официальная Россия</a></li>
+				<li><a href="/cik_info/feedback.php">Обратная связь</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 footer_3">
+			<ul class="footer_menu">
+				<li><a href="/contact/">Контакты</a></li>
+				<li><a href="http://old.cikrf.ru/" target="_blank">Архивная версия сайта</a></li>
+				<li><a href="/activity/relevant/detail/30637/">Противодействие коррупции</a></li>
+				<li><a href="/pers-data/">О персональных данных пользователей</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 top_select_block footer_4">
+			<ul class="footer_menu">
+				<li><a href="/zakazy/">Информация о закупках</a>
+					<ul class="footer_menu_sub">
+						<li><a href="/zakazy/zakcik/">Закупки ЦИК России</a></li>
+						<li><a href="/zakazy/zakfci/">Закупки ФЦИ при ЦИК России</a></li>
+						<li><a href="http://www.rcoit.ru/about/documents/tenders/">Закупки РЦОИТ при ЦИК России</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+</body></html>

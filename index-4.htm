@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="en" 
+  xmlns:og="http://ogp.me/ns#" dir="ltr">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-a0818c27efaf0b38809",applicationID:"669230512"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.ifes.org/sites/all/themes/ifes_2020/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="The International Foundation for Electoral Systems (IFES) supports citizens’ rights to participate in free and fair elections. Our independent expertise strengthens electoral systems and builds local capacity to deliver sustainable solutions." />
+<link rel="canonical" href="https://www.ifes.org/" />
+<link rel="shortlink" href="https://www.ifes.org/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@IFES1987" />
+<meta name="twitter:site:id" content="44401732" />
+<meta name="twitter:creator" content="@IFES1987" />
+<meta name="twitter:creator:id" content="44401732" />
+<meta name="twitter:title" content="International Foundation for Electoral Systems" />
+<meta name="twitter:url" content="https://www.ifes.org/home" />
+<meta name="twitter:description" content="Global Expertise. Local Solutions. Sustainable Democracy." />
+<meta name="twitter:image" content="https://www.ifes.org/sites/default/files/styles/panopoly_image_original/public/voter_image.jpg" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image:height" content="600" />
+<meta name="twitter:image:alt" content="International Foundation for Electoral Systems" />
+  <title>IFES | The International Foundation for Electoral Systems</title>
+  <style type="text/css" media="all">
+@import url("https://www.ifes.org/modules/system/system.base.css?r39z46");
+@import url("https://www.ifes.org/modules/system/system.messages.css?r39z46");
+@import url("https://www.ifes.org/modules/system/system.theme.css?r39z46");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-jquery-ui-theme.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.accordion.min.css?r39z46");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/date/date_api/date.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/date/date_popup/themes/datepicker.1.7.css?r39z46");
+@import url("https://www.ifes.org/modules/field/theme/field.css?r39z46");
+@import url("https://www.ifes.org/modules/node/node.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_admin/panopoly-admin-navbar.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-dropbutton.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_magic/css/panopoly-magic.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_theme/css/panopoly-featured.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_theme/css/panopoly-accordian.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_theme/css/panopoly-layouts.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_widgets/panopoly-widgets.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_widgets/panopoly-widgets-spotlight.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_wysiwyg/panopoly-wysiwyg.css?r39z46");
+@import url("https://www.ifes.org/modules/poll/poll.css?r39z46");
+@import url("https://www.ifes.org/sites/all/modules/contrib/quiz/quiz.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/radix_layouts/radix_layouts.css?r39z46");
+@import url("https://www.ifes.org/modules/search/search.css?r39z46");
+@import url("https://www.ifes.org/modules/user/user.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/views/css/views.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/caption_filter/caption-filter.css?r39z46");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/ctools/css/ctools.css?r39z46");
+@import url("https://www.ifes.org/profiles/panopoly/modules/contrib/panels/css/panels.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/ifes_2020/layouts/home2020/home2020.css?r39z46");
+@import url("https://www.ifes.org/sites/default/files/honeypot/honeypot.css?r39z46");
+@import url("https://www.ifes.org/sites/all/modules/contrib/simple_cookie_compliance/css/simple_cookie_compliance.css?r39z46");
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" />
+<style type="text/css" media="all">
+@import url("https://www.ifes.org/sites/all/themes/ifes_2020/layouts/footer2020/footer2020.css?r39z46");
+</style>
+<link type="text/css" rel="stylesheet" href="https://use.typekit.net/dcu4hon.css" media="all" />
+<style type="text/css" media="screen">
+@import url("https://www.ifes.org/sites/all/themes/kalatheme/css/tweaks.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/kalatheme/css/panopoly.css?r39z46");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ifes.org/sites/all/themes/ifes/css/owl.carousel.min.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/ifes/css/jquery-jvectormap-2.0.3.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/ifes/css/update.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/ifes_2020/../../libraries/ifes_bootstrap/css/bootstrap.min.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/ifes_2020/../ifes/css/main.css?r39z46");
+@import url("https://www.ifes.org/sites/all/themes/ifes_2020/css/main-2020.css?r39z46");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_images/panopoly-images.css?r39z46");
+@import url("https://www.ifes.org/sites/default/files/css_injector/css_injector_1.css?r39z46");
+</style>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/profiles/panopoly/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ifes.org/misc/jquery-extend-3.4.0.js?v=1.8.3"></script>
+<script type="text/javascript" src="https://www.ifes.org/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.8.3"></script>
+<script type="text/javascript" src="https://www.ifes.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.ifes.org/misc/drupal.js?r39z46"></script>
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/profiles/panopoly/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/contrib/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/contrib/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://www.ifes.org/misc/ajax.js?v=7.82"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/contrib/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_images/panopoly-images.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_admin/panopoly-admin.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_magic/panopoly-magic.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_theme/js/panopoly-accordion.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/contrib/caption_filter/js/caption-filter.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/modules/contrib/simple_cookie_compliance/js/simple_cookie_compliance.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/libraries/jquery.imagesloaded/jquery.imagesloaded.min.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/modules/contrib/google_analytics/googleanalytics.js?r39z46"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-1573573-4", {"cookieDomain":"auto"});ga("send", "pageview");$('.salsa-form-submint').click(function() {
+        ga('send', 'event', 'Join Button', 'Click', 'Join Our Mailing List');
+    });
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/modules/contrib/google_analytics_et/js/google_analytics_et.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/misc/progress.js?v=7.82"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var popups_ondemand = [];
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes_2020/js/js.cookie.js?r39z46"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes_2020/js/homepage.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/jquery.matchHeight-min.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/iframeResizer.min.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/owl.carousel.min.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/jquery-jvectormap-2.0.5.min.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/jquery-jvectormap-world-merc.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/jquery-jvectormap-oceania-merc.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes/js/ifes.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes_2020/../../libraries/ifes_bootstrap/js/bootstrap.min.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/sites/all/themes/ifes_2020/js/header.js?r39z46"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"ifes_2020","theme_token":"FNwZaiwt--7vcP0e31sOLgHqrkif7Qa_8RUW5wUK3d4","jquery_version":"1.8","js":{"\/\/code.jquery.com\/jquery-1.8.3.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/code.jquery.com\/ui\/1.10.2\/jquery-ui.min.js":1,"1":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_images\/panopoly-images.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_admin\/panopoly-admin.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/panopoly-magic.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/js\/panopoly-accordion.js":1,"profiles\/panopoly\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"profiles\/panopoly\/libraries\/jquery.imagesloaded\/jquery.imagesloaded.min.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/modules\/contrib\/google_analytics_et\/js\/google_analytics_et.js":1,"misc\/progress.js":1,"3":1,"sites\/all\/themes\/ifes_2020\/js\/js.cookie.js":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/fancybox\/3.3.5\/jquery.fancybox.min.js":1,"sites\/all\/themes\/ifes_2020\/js\/homepage.js":1,"sites\/all\/themes\/ifes\/js\/jquery.matchHeight-min.js":1,"sites\/all\/themes\/ifes\/js\/iframeResizer.min.js":1,"sites\/all\/themes\/ifes\/js\/owl.carousel.min.js":1,"sites\/all\/themes\/ifes\/js\/jquery-jvectormap-2.0.5.min.js":1,"sites\/all\/themes\/ifes\/js\/jquery-jvectormap-world-merc.js":1,"sites\/all\/themes\/ifes\/js\/jquery-jvectormap-oceania-merc.js":1,"sites\/all\/themes\/ifes\/js\/ifes.js":1,"sites\/all\/themes\/ifes_2020\/..\/..\/libraries\/ifes_bootstrap\/js\/bootstrap.min.js":1,"sites\/all\/themes\/ifes_2020\/js\/header.js":1,"\/\/platform.twitter.com\/widgets.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets-spotlight.js":1,"4":1,"https:\/\/netdna.bootstrapcdn.com\/bootstrap\/3.2.0\/js\/bootstrap.min.js":1,"5":1,"sites\/all\/modules\/contrib\/simple_cookie_compliance\/js\/simple_cookie_compliance.js":1,"6":1,"7":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"profiles\/panopoly\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/panopoly\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_admin\/panopoly-admin-navbar.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-dropbutton.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/css\/panopoly-magic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-featured.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-accordian.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-layouts.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets-spotlight.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_wysiwyg\/panopoly-wysiwyg.css":1,"modules\/poll\/poll.css":1,"sites\/all\/modules\/contrib\/quiz\/quiz.css":1,"profiles\/panopoly\/modules\/contrib\/radix_layouts\/radix_layouts.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/panopoly\/modules\/contrib\/views\/css\/views.css":1,"profiles\/panopoly\/modules\/contrib\/caption_filter\/caption-filter.css":1,"profiles\/panopoly\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/panopoly\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/ifes_2020\/layouts\/home2020\/home2020.css":1,"public:\/\/honeypot\/honeypot.css":1,"sites\/all\/modules\/contrib\/simple_cookie_compliance\/css\/simple_cookie_compliance.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/fancybox\/3.3.5\/jquery.fancybox.min.css":1,"https:\/\/netdna.bootstrapcdn.com\/bootstrap\/3.2.0\/css\/bootstrap.min.css":1,"https:\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.1.0\/css\/font-awesome.min.css":1,"sites\/all\/themes\/ifes_2020\/layouts\/footer2020\/footer2020.css":1,"https:\/\/use.typekit.net\/dcu4hon.css":1,"sites\/all\/themes\/kalatheme\/css\/tweaks.css":1,"sites\/all\/themes\/kalatheme\/css\/panopoly.css":1,"sites\/all\/themes\/ifes\/css\/owl.carousel.min.css":1,"sites\/all\/themes\/ifes\/css\/jquery-jvectormap-2.0.3.css":1,"sites\/all\/themes\/ifes\/css\/main.css":1,"sites\/all\/themes\/ifes\/css\/update.css":1,"sites\/all\/themes\/ifes_2020\/..\/..\/libraries\/ifes_bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/themes\/ifes_2020\/..\/ifes\/css\/main.css":1,"sites\/all\/themes\/ifes_2020\/css\/main-2020.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_images\/panopoly-images.css":1,"public:\/\/css_injector\/css_injector_1.css":1}},"CToolsModal":{"modalSize":{"type":"scale","width":".9","height":".9","addWidth":0,"addHeight":0,"contentRight":25,"contentBottom":75},"modalOptions":{"opacity":".55","background-color":"#FFF"},"animationSpeed":"fast","modalTheme":"CToolsModalDialog","throbberTheme":"CToolsModalThrobber"},"panopoly_magic":{"pane_add_preview_mode":"manual"},"better_exposed_filters":{"views":{"what_s_going_on_at_ifes":{"displays":{"panel_pane_1":{"filters":[]}}},"electionguide_calendar_feed":{"displays":{"panel_pane_1":{"filters":[]}}},"ifes_in_the_news_home":{"displays":{"panel_pane_1":{"filters":[]}}},"homepage_slideshow":{"displays":{"block":{"filters":[]}}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"googleAnalyticsETSettings":{"selectors":[],"settings":[]},"ajax":{"edit-submit":{"callback":"simple_cookie_compliance_dismiss_form_submit","progress":{"type":"none"},"wrapper":"cookie-compliance","event":"mousedown","keypress":true,"prevent":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"I Consent"}}},"urlIsAjaxTrusted":{"\/system\/ajax":true,"\/":true}});
+//--><!]]>
+</script>
+</head>
+<body class="ifes-body html front not-logged-in no-sidebars page-home region-content" >
+  <div id="skip-link">
+    <a href="#main" class="element-focusable element-invisible">Skip to main content</a>
+    <a href="#main-navigation" class="element-focusable element-invisible">Skip to main  navigation</a>
+  </div>
+    <div class="region region-page-top">
+    <div id="cookie-compliance" class="cookie-compliance clearfix">
+  <div class="cookie-compliance__inner">
+    <div class="cookie-compliance__text">
+          <p><h2>We use cookies to improve your user experience.</h2>
+<p>By continuing to use our website without changing your settings, you agree to allow us to use cookies and other identifiers. For more information, see our <a href="http://www.ifes.org/privacy-policy#cookies">Privacy Policy</a>.</p></p>
+        </div>
+          <form action="/" method="post" id="simple-cookie-compliance-dismiss-form" accept-charset="UTF-8" role="form"><div><input class="cookie-compliance__button form-submit btn btn-default btn-primary" type="submit" id="edit-submit" name="op" value="I Consent" /><input type="hidden" name="form_build_id" value="form-ydoNOsyBWrlJtlbIJFUCG27hsgXrDk-ZvQUPAXADpyo" />
+<input type="hidden" name="form_id" value="simple_cookie_compliance_dismiss_form" />
+<div class="url-textfield"><div class="form-item form-type-textfield form-item-url form-group">
+  <label for="edit-url">Leave this field blank </label>
+ <input autocomplete="off" class="form-control form-text fa-on" type="text" id="edit-url" name="url" value="" size="20" maxlength="128" />
+</div>
+</div></div></form>      </div>
+</div>
+
+<noscript>
+  <div class="cookie-compliance clearfix">
+    <div class="cookie-compliance__inner">
+      <div class="cookie-compliance__text">
+              <p><h2>We use cookies to improve your user experience.</h2>
+<p>By continuing to use our website without changing your settings, you agree to allow us to use cookies and other identifiers. For more information, see our <a href="http://www.ifes.org/privacy-policy#cookies">Privacy Policy</a>.</p></p>
+            </div>
+              <form action="/" method="post" id="simple-cookie-compliance-dismiss-form" accept-charset="UTF-8" role="form"><div></div></form>          </div>
+  </div>
+</noscript>
+  </div>
+  <div id="page-wrapper">
+  <div id="page">
+
+    <!-- Site Header -->
+<header role="banner" id="site-header">
+    <div class="header-primary">
+    	<div class="container">
+	      <div class="row">
+	        <div class="col-sm-6 col-xs-12 header-primary-left">
+	          <!-- Logo -->
+	          	            <div class="logo">
+	              <a href="/" title="International Foundation for Electoral Systems" rel="home" id="logo">
+	                <img src="/sites/all/themes/ifes_2020/images/logo-vector.svg" alt="International Foundation for Electoral Systems" class="img-responsive" />
+	              </a>
+	            </div>
+	          	        </div>
+	        <div class="col-sm-6 col-xs-12 header-primary-right">
+	        	<div id="__ba_launchpad"></div>
+	        	<nav class="nav-social">
+	        		<ul class="nolist">
+	        			<li>
+		          		<a href="https://twitter.com/IFES1987" target="_blank"><i class="fa fa-twitter"></i></a>
+		          	</li>
+	        			<li>
+									<a href="https://www.facebook.com/IFES1987" target="_blank"><i class="fa fa-facebook"></i></a>
+								</li>
+		          	<li>
+		          		<a href="https://www.linkedin.com/company/the-international-foundation-for-electoral-systems" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+		          	</li>
+		          	<li>
+		          		<a href="https://www.youtube.com/user/IFES87" target="_blank"><i class="fa fa-youtube-play"></i></a>
+		          	</li>
+		          </ul>
+		        </nav>
+	        </div>
+	      </div>
+	    </div>
+    </div>
+    <div class="header-secondary">
+    	<div class="container">
+	      <div class="row header-secondary">
+					<div class="col-xs-12">
+						<!-- Main Menu -->
+	          <nav class="navbar navbar-default" id="main-navigation" role="navigation">
+	              
+              <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="element-invisible">Toggle navigation</span>
+                  <span class="icon-bar" aria-hidden="true"></span>
+                  <span class="icon-bar" aria-hidden="true"></span>
+                  <span class="icon-bar" aria-hidden="true"></span>
+                </button>
+              </div><!-- /.navbar-header -->
+
+              <div class="collapse navbar-collapse ">
+                
+								<ul class="nav navbar-nav links"><li class="mid-1335 first dropdown dropdown-kt clearfix"><a href="/who-we-are" class="first expanded">Who We Are</a><a href="#" class="dropdown-toggle dropdown-toggle-kt" data-toggle="dropdown" id="main-menu-dropdown-1" aria-expanded="false"><span class="element-invisible">Dropdown:Who We Are</span><span class="caret" aria-hidden="true"></span></a><ul class="dropdown-menu dropdown-kt" aria-labelledby="main-menu-dropdown-1"><li class="mid-30978 first"><a href="/who-we-are" class="first leaf">Vision and Mission</a><li class="mid-2964"><a href="/who-we-are/board" class="leaf">Board</a><li class="mid-3031"><a href="/who-we-are/leadership" class="leaf">Leadership</a><li class="mid-1324"><a href="/who-we-are/experts" class="leaf">Experts</a><li class="mid-1972"><a href="/who-we-are/feature-articles" class="leaf">Feature Articles</a><li class="mid-3812"><a href="/who-we-are/events" class="leaf">Events</a><li class="mid-2018"><a href="/who-we-are/awards" class="leaf">Awards</a><li class="mid-2019"><a href="https://donate.ifes.org/donate" class="leaf">Donate</a><li class="mid-2020"><a href="/who-we-are/contact" class="leaf">Contact</a><li class="mid-30953 last"><a href="/newsroom" class="last leaf">Newsroom</a></ul><li class="mid-1321 dropdown dropdown-kt clearfix"><a href="/what-we-do" class="expanded">What We Do</a><a href="#" class="dropdown-toggle dropdown-toggle-kt" data-toggle="dropdown" id="main-menu-dropdown-2" aria-expanded="false"><span class="element-invisible">Dropdown:What We Do</span><span class="caret" aria-hidden="true"></span></a><ul class="dropdown-menu dropdown-kt" aria-labelledby="main-menu-dropdown-2"><li class="mid-30954 first"><a href="/issues/anti-corruption" class="first leaf">Anti-Corruption</a><li class="mid-7268"><a href="/issues/electoral-management" class="leaf">Electoral Management</a><li class="mid-30227"><a href="/issues/electoral-law" class="leaf">Electoral Law</a><li class="mid-1876"><a href="/issues/participation-and-inclusion" class="leaf">Participation and Inclusion</a><li class="mid-7269"><a href="/issues/research-and-publications" class="leaf">Research and Publications</a><li class="mid-1896 last"><a href="/cepps" class="last leaf">CEPPS</a></ul><li class="mid-1322 dropdown dropdown-kt clearfix"><a href="/where-we-work" class="expanded">Where We Work</a><a href="#" class="dropdown-toggle dropdown-toggle-kt" data-toggle="dropdown" id="main-menu-dropdown-3" aria-expanded="false"><span class="element-invisible">Dropdown:Where We Work</span><span class="caret" aria-hidden="true"></span></a><ul class="dropdown-menu dropdown-kt" aria-labelledby="main-menu-dropdown-3"><li class="mid-1892 first"><a href="/africa" class="first leaf">Africa</a><li class="mid-1893"><a href="/americas" class="leaf">Americas</a><li class="mid-1991"><a href="/asia-pacific" class="leaf">Asia-Pacific</a><li class="mid-1894"><a href="/europe-eurasia" class="leaf">Europe and Eurasia</a><li class="mid-1895"><a href="/middle-east-and-north-africa" class="leaf">Middle East and North Africa</a><li class="mid-2230"><a href="/regions/view-all-countries" class="leaf">View All Countries</a><li class="mid-30939 last"><a href="/interactive-map" class="last leaf">Map</a></ul><li class="mid-1325 last dropdown dropdown-kt clearfix"><a href="/work-us" class="last expanded">Work With Us</a><a href="#" class="dropdown-toggle dropdown-toggle-kt" data-toggle="dropdown" id="main-menu-dropdown-4" aria-expanded="false"><span class="element-invisible">Dropdown:Work With Us</span><span class="caret" aria-hidden="true"></span></a><ul class="dropdown-menu dropdown-kt" aria-labelledby="main-menu-dropdown-4"><li class="mid-1899 first"><a href="/work-us/careers" class="first leaf">Careers</a><li class="mid-1897"><a href="/work-us/partnerships" class="leaf">Partnerships</a><li class="mid-1898"><a href="/work-us/business-opportunities" class="leaf">Business Opportunities</a><li class="mid-1900 last"><a href="/work-us/fellowships" class="last leaf">Fellowships</a></ul></ul>
+								<!-- Secondary Menu -->
+                
+                <ul class="nav navbar-nav secondary-links navbar-right"><li class="menu-1327 first"><a href="/who-we-are/events">Events</a></li>
+<li class="menu-30970 last"><a href="https://donate.ifes.org/donate">Donate</a></li>
+</ul>
+	              <a class="btn btn-bright header-component-trigger" type="button" href="/join-our-mailing-list">Join Mailing List</a>
+
+                <!-- Search -->
+                <div class="header-component component-search-form">
+                	<button class="btn btn-trans btn-contrast header-component-trigger" type="button"><i class="fa fa-search"></i></button>
+                	<div class="header-component-content">
+		                <form action="/" method="post" id="search-block-form" accept-charset="UTF-8" role="form"><div><div class="container-inline form-inline">
+      <h2 class="sr-only">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form form-group">
+  <label class="sr-only" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." class="form-control form-text fa-on" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit--2" name="op" value="Search" class="form-submit btn btn-default btn-primary" /></div><input type="hidden" name="form_build_id" value="form-D5yUa1vh9C1mZifA3Wc6jf48M1O3Bbocr-ilsckGhwk" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>		              </div>
+	              </div>
+           
+	            </div>
+	          </nav>
+		      </div>
+		    </div>
+		  </div>
+    </div><!--/.container-->
+</header>
+
+    <!-- Page Main -->
+    <div id="main-wrapper" class="clearfix">
+      <main id="main" class="clearfix" role="main">
+        <div id="top-content">
+          <div class="column container">
+            
+            
+            
+                      </div>
+        </div> <!-- /.section, /#top-content -->
+
+        <div id="content">
+          <div class="column ">
+              <div class="region region-content">
+    <div id="block-views-homepage-slideshow-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="slider-main">
+      <div class="slider-background" style="background: #fff url('https://www.ifes.org/sites/default/files/screenshot_3.png') top center no-repeat; background-size: 100%;">
+  <div class="slider-col">
+    <div class="panel-pane pane-mm-pane hero-desc-home-wrapper container">
+      <div class="pane-content">
+        <div class="ifes-home-page-hero mm-pane-wrapper">
+          <div class="hero-desc-home">
+            <div class="hero-desc-home-content">
+              <h2><div class="field-content">Why Electoral Justice Matters</div></h2>
+            </div>
+            <div class="hero-desc-home-links">
+              <p class="first-link"><div class="field-content"><a href="https://www.ifes.org/multimedia/video-why-electoral-justice-matters">Watch the Video</a></div></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="slider-background" style="background: #fff url('https://www.ifes.org/sites/default/files/covid-19_-_a_survival_guide_for_democracies_795_centered_flipped_0.png') top center no-repeat; background-size: 100%;">
+  <div class="slider-col">
+    <div class="panel-pane pane-mm-pane hero-desc-home-wrapper container">
+      <div class="pane-content">
+        <div class="ifes-home-page-hero mm-pane-wrapper">
+          <div class="hero-desc-home">
+            <div class="hero-desc-home-content">
+              <h2><div class="field-content">COVID-19: A Survival Guide for Democracies</div></h2>
+            </div>
+            <div class="hero-desc-home-links">
+              <p class="first-link"><div class="field-content"><a href="https://www.ifes.org/covid-19">Learn More</a></div></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="slider-background" style="background: #fff url('https://www.ifes.org/sites/default/files/ifes_ballot_hero_header_2400.jpg') top center no-repeat; background-size: 100%;">
+  <div class="slider-col">
+    <div class="panel-pane pane-mm-pane hero-desc-home-wrapper container">
+      <div class="pane-content">
+        <div class="ifes-home-page-hero mm-pane-wrapper">
+          <div class="hero-desc-home">
+            <div class="hero-desc-home-content">
+              <h2><div class="field-content">IFES COVID-19 Briefing Series</div></h2>
+            </div>
+            <div class="hero-desc-home-links">
+              <p class="first-link"><div class="field-content"><a href="https://www.ifes.org/ifes-covid-19-briefing-series">Learn More</a></div></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+<div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+<div class="panel-display home clearfix " >
+  <section class="section">
+
+    <!-- Together We Build -->
+    <div class="home-pane pane-home-together">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel-pane pane-panels-mini pane-ifes-by-the-numbers" >
+  
+        <h4 class="pane-title">Together we build democracies that deliver for all.</h4>
+    
+  
+  <div class="pane-content">
+    
+<div class="panel-display mccoppin clearfix radix-mccoppin" id="mini-panel-ifes_by_the_numbers-1">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 radix-layouts-column1 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-custom pane-4" >
+  
+      
+  
+  <div class="pane-content">
+    <div class='factoid'>
+Reached
+<strong>90M+</strong>
+<small>people with voter and civic education in 2020</small>
+</div>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+      <div class="col-md-4 radix-layouts-column2 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-custom pane-5" >
+  
+      
+  
+  <div class="pane-content">
+    <div class='factoid'>
+Worked In
+<strong>50+</strong>
+<small>countries in 2020</small>
+</div>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+      <div class="col-md-4 radix-layouts-column3 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-custom pane-6" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="factoid">Supported <strong>79</strong> <small>elections in 2020</small></div>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div><!-- /.mccoppin -->
+  </div>
+
+  
+  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Stories -->
+    <div class="home-pane pane-home-features pane-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel-pane pane-views-panes pane-what-s-going-on-at-ifes-panel-pane-1" >
+  
+        <h4 class="pane-title">Featured Stories</h4>
+    
+  
+  <div class="pane-content">
+    <div class="view view-what-s-going-on-at-ifes view-id-what_s_going_on_at_ifes view-display-id-panel_pane_1 view-dom-id-69bcb0c99ea5704037c90b9181a06f7e">
+            <div class="view-header">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+a.absolute-none {position: absolute !important;left: -9999px !important;overflow-x: hidden !important;}
+/*--><!]]>*/
+</style><a class="absolute-none" title="Pittsburgh Web Design" href="https://www.2440media.com" target="_blank" rel="noopener">P</a>    </div>
+  
+  
+  
+      <div class="view-content">
+          <div  class="views-row views-row-1 views-row-odd views-row-first col-md-4 col-sm-6 col-xs-12">
+	  	
+	    	<div class="card card-link">
+	    		<a href="/news/countering-kremlin-influence-european-democratic-processes"><div class="field-content"><img class="home--teaser-image" src="https://www.ifes.org/sites/default/files/styles/home__teaser_image/public/putin_media_hp_edited.jpg?itok=neSZNRJ_" width="390" height="270" alt="" /></div></a>
+<div class="card-content">
+  <a href="/news/countering-kremlin-influence-european-democratic-processes">Countering Kremlin Influence in European Democratic Processes</a></div>
+            
+	    	</div>
+		</div>
+    <div  class="views-row views-row-2 views-row-even col-md-4 col-sm-6 col-xs-12">
+	  	
+	    	<div class="card card-link">
+	    		<a href="/faqs/elections-uzbekistan-2021-presidential-election"><div class="field-content"><img class="home--teaser-image" src="https://www.ifes.org/sites/default/files/styles/home__teaser_image/public/uzbekistan_elections_pic_homepage.jpg?itok=jf0WFXYw" width="390" height="270" alt="Uzbek citizens leave voting cabins at a polling station in Tashkent, Uzbekistan." /></div></a>
+<div class="card-content">
+  <a href="/faqs/elections-uzbekistan-2021-presidential-election">Elections in Uzbekistan: 2021 Presidential Election</a></div>
+            
+	    	</div>
+		</div>
+    <div  class="views-row views-row-3 views-row-odd col-md-4 col-sm-6 col-xs-12">
+	  	
+	    	<div class="card card-link">
+	    		<a href="/news/parliamentary-elections-and-politics-russia"><div class="field-content"><img class="home--teaser-image" src="https://www.ifes.org/sites/default/files/styles/home__teaser_image/public/russian_flag_homepage.jpg?itok=q1dzcaPy" width="390" height="270" alt="Russian flag" /></div></a>
+<div class="card-content">
+  <a href="/news/parliamentary-elections-and-politics-russia">Parliamentary Elections and Politics in Russia</a></div>
+            
+	    	</div>
+		</div>
+    <div  class="views-row views-row-4 views-row-even col-md-4 col-sm-6 col-xs-12">
+	  	
+	    	<div class="card card-link">
+	    		<a href="/news/implementing-international-anti-corruption-commitments-worldwide"><div class="field-content"><img class="home--teaser-image" src="https://www.ifes.org/sites/default/files/styles/home__teaser_image/public/homepage_edited_magnus_ecac.jpg?itok=ijTpEl1z" width="390" height="270" alt="" /></div></a>
+<div class="card-content">
+  <a href="/news/implementing-international-anti-corruption-commitments-worldwide">Implementing International Anti-Corruption Commitments Worldwide</a></div>
+            
+	    	</div>
+		</div>
+    <div  class="views-row views-row-5 views-row-odd col-md-4 col-sm-6 col-xs-12">
+	  	
+	    	<div class="card card-link">
+	    		<a href="/publications/opinion-corruption-pandemic-solution-democracy"><div class="field-content"><img class="home--teaser-image" src="https://www.ifes.org/sites/default/files/styles/home__teaser_image/public/copy_of_to_clean_up_governance_we_must_clean_up_elections._795_x_350_px_1.png?itok=XbLT53dI" width="390" height="270" alt="To clean up governance, we must clean up elections." /></div></a>
+<div class="card-content">
+  <a href="/publications/opinion-corruption-pandemic-solution-democracy">Opinion: Corruption is a pandemic. The solution is democracy.</a></div>
+            
+	    	</div>
+		</div>
+    <div  class="views-row views-row-6 views-row-even views-row-last col-md-4 col-sm-6 col-xs-12">
+	  	
+	    	<div class="card card-link">
+	    		<a href="/news/ifes-and-cepps-partners-launch-countering-disinformation-guide"><div class="field-content"><img class="home--teaser-image" src="https://www.ifes.org/sites/default/files/styles/home__teaser_image/public/homepage_cepps_guide_launch_graphic_edited.png?itok=lGuFjV2o" width="390" height="270" alt="" /></div></a>
+<div class="card-content">
+  <a href="/news/ifes-and-cepps-partners-launch-countering-disinformation-guide">IFES and CEPPS Partners Launch Countering Disinformation Guide</a></div>
+            
+	    	</div>
+		</div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Election Data -->
+    <div class="home-pane pane-home-election-data pane-bright">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel-pane pane-custom pane-7" >
+  
+        <h4 class="pane-title">IFES is the leader in global elections</h4>
+    
+  
+  <div class="pane-content">
+    <p>IFES' Election Guide offers the most comprehensive and timely verified election information available online.</p>  </div>
+
+  
+  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="home-election-data-left col-sm-6 col-xs-12">
+                    <div class="panel-pane pane-custom pane-8" >
+  
+      
+  
+  <div class="pane-content">
+    <figure class="figure-election-guide card card-link card-link-dark">
+<a href="http://www.electionguide.org/" target="_blank">
+<img src="/sites/all/themes/ifes_2020/images/bg-ukraine-vote.jpg" alt="Woman voting in Ukraine" width="567" height="320" />
+</a>
+<figcaption class="card-content">
+<a href="http://www.electionguide.org/" target="_blank"><img src="/sites/all/themes/ifes_2020/images/logo-election-guide.png" alt="Election Guide" title="Election Guide" width="300" height="60" />
+</figcaption>
+</figure>
+</a>  </div>
+
+  
+  </div>
+                </div>
+                <div class="home-election-data-right col-sm-6 col-xs-12">
+                    <div class="panel-pane pane-views-panes pane-electionguide-calendar-feed-panel-pane-1 feeds-home" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-electionguide-calendar-feed view-id-electionguide_calendar_feed view-display-id-panel_pane_1 view-dom-id-c5ca5904c5ed5de33d62ffc3cd7587de">
+            <div class="view-header">
+      <h3>Upcoming Elections</h3>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first col-xs-12">
+      
+  <div class="views-field views-field-created">        <span class="field-content">31 <span>Dec 2021</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.electionguide.org/elections/id/3293/" target="_blank">Côte d&#039;Ivoire: Election for Ivoirian National Assembly</a></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even col-xs-12">
+      
+  <div class="views-field views-field-created">        <span class="field-content">24 <span>Jan 2022</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.electionguide.org/elections/id/3508/" target="_blank">Libya: Election for Libyan House of Representatives</a></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd col-xs-12">
+      
+  <div class="views-field views-field-created">        <span class="field-content">30 <span>Jan 2022</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.electionguide.org/elections/id/3823/" target="_blank">Portugal: Election for Portuguese Assembly of the Republic</a></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last col-xs-12">
+      
+  <div class="views-field views-field-created">        <span class="field-content">06 <span>Feb 2022</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.electionguide.org/elections/id/3751/" target="_blank">Costa Rica: Election for President</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News and Tweets -->
+    <div class="home-pane pane-home-news-tweets">
+        <div class="container">
+            <div class="row">
+                <div class="home-news-tweets-left col-sm-6 col-xs-12">
+                    <div class="panel-pane pane-views-panes pane-ifes-in-the-news-home-panel-pane-1" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-ifes-in-the-news-home view-id-ifes_in_the_news_home view-display-id-panel_pane_1 view-dom-id-e02f7309687368f7e181dd03454dd082">
+            <div class="view-header">
+      <h4 class="pane-title">IFES In the News <a href="/newsroom">View All Articles</a></h4>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://washdiplomat.com/v-dem-warns-of-democratic-backsliding-in-covids-wake/">V-Dem warns of democratic backsliding in COVID’s wake</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">The Washington Diplomat</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 28, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://cdn.com.do/nacionales/presidente-abinader-recibe-plan-estrategico-institucional-ff-aa/">President Abinader receives Institutional Strategic Plan FF.AA.</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">CDN</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 22, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://ly.usembassy.gov/ambassador-norland-focused-on-the-electoral-process-during-todays-visit-to-tripoli/">Ambassador Norland focused on the electoral process during today’s visit to Tripoli</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">U.S. Embassy in Libya</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 20, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://lefaso.net/spip.php?article109796=">Management of electoral risks in Burkina Faso: The Independent National Electoral Commission equips actors</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Lefaso</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 14, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.mans.co.me/acc2021/">XIV National Anti-Corruption Conference 9-10. December 2021</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">The Network for the Affirmation of the Non-Governmental Sector</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 14, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://votodigital.wordpress.com/2021/12/09/cinco-ideas-para-fortalecer-la-democracia-en-el-mundo/">Five ideas to strengthen democracy in the world</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Voto Digital</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 9, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://reliefweb.int/report/world/violence-targeting-women-politics-trends-targets-types-and-perpetrators-political">Violence targeting women in politics: trends in targets, types, and perpetrators of political violence</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">ReliefWeb</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 8, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.politico.com/newsletters/global-insider/2021/12/08/hunting-for-democracy-carrots-495372">Hunting for democracy carrots</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Politico</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 8, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.altaghyeer.info/en/2021/12/06/unitams-to-highlight-achievements-before-sudan-elections/">UNITAMS to highlight “achievements” before Sudan elections</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Al Taghyeer</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 7, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.semana.com/mejor-colombia/articulo/se-instalo-la-mision-de-observacion-electoral-internacional-para-las-elecciones-de-los-consejos-municipales-y-locales-de-juventud/202153/">The International Electoral Observation Mission was installed for the elections of the Municipal and Local Youth Councils</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Semana</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 3, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://proceso.hn/cne-agradece-al-el-salvador-por-prestamo-de-equipo-para-implementar-el-trep-en-honduras/">CNE thanks El Salvador for the loan of equipment to implement the TREP in Honduras</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Proceso Digital</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 1, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://thenewshawks.com/voter-registration-suspension-raises-eyebrows/">Voter registration suspension raises eyebrows</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">The News Hawks</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">December 1, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://lapresse.tn/116314/inclusion-des-personnes-porteuses-de-handicap-un-defi-majeur-pour-la-municipalite-de-msaken/">Inclusion of people with disabilities: a major challenge for the municipality of M&#039;saken</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">La Presse</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">November 28, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://stnhn.com/cph-capacita-a-periodistas-en-temas-electorales/">CPH trains journalists on electoral issues</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">STN Honduras</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">November 20, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://actualite.cd/2021/11/18/rdc-la-ceni-et-lifes-etudient-des-mecanismes-pour-la-poursuite-de-leur-collaboration">DRC: CENI and IFES are studying mechanisms for continuing their collaboration</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Actualite</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">November 18, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-16 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://eci.gov.in/files/file/13822-eci-releases-five-international-training-modules-on-election-management%C2%A0/">ECI releases five International Training Modules on Election Management</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">The Election Commission of India</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">November 17, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-17 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://acento.com.do/opinion/a-proposito-de-la-fracasada-reforma-fiscal-9000461.html">About the failed tax reform</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">Acento</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">October 30, 2021</span></div>  </div>  </div>
+  <div class="views-row views-row-18 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://www.thenationalnews.com/mena/2021/10/29/libyas-registered-female-voters-double-in-number-before-polls/">Armed with pamphlets: the battle to register women voters in Libya</a></span>  </div>  
+  <div class="views-field views-field-field-outlet">        <div class="field-content">The National News</div>  </div>  
+  <div class="views-field views-field-field-news-publication-date">        <div class="field-content"><span class="date-display-single">October 29, 2021</span></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+                </div>
+                <div class="home-news-tweets-right col-sm-6 col-xs-12">
+                    <div class="panel-pane pane-block pane-twitter-block-1" >
+  
+        <h4 class="pane-title">IFES Tweets</h4>
+    
+  
+  <div class="pane-content">
+    <a href="https://twitter.com/IFES1987" class="twitter-timeline" data-widget-id="484691713252806657" data-tweet-limit="3" data-aria-polite="polite">Tweets by IFES1987</a>  </div>
+
+  
+  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</div><!-- /.base -->
+  </div>
+</div>
+<div id="block-block-2" class="block block-block">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-sm-6 col-xs-12">
+
+				 				  <h2>Subscribe to Our Mailing List</h2>
+								  
+				 <div class="content">
+					    <nbsp/><nbsp/>				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12 pull-right">
+	      <div class="component component-mailing-list-form">
+					<div class="component-content">
+            <form action="https://salsa4.salsalabs.com/save" method="POST">
+              <input type="hidden" name="organization_KEY" value="51388"/>
+              <input type="hidden" name="email_trigger_KEYS" value="12644,12656"/>
+              <input type="hidden" name="object" value="supporter"/>
+              <input type="hidden" name="Receive_Email" value="1"/>
+              <label for="email" class="sr-only">Email:</label><input type="text" id="email" name="Email" placeholder="Email" /></br>
+              <style>.memberCode{display:none;}</style>
+              <div class="memberCode"> Optional Member Code <input name="first_name_949" value=""/></div>
+              <input type="hidden" name="redirect" value="https://www.ifes.org/join-our-mailing-list"/>
+              <button type="submit" class="btn btn-bright">Subscribe</button>
+            </form>
+        	</div>
+        </div>
+			</div>
+	  </div>
+	</div>
+</div>  </div>
+          </div>
+        </div> <!-- /.section, /#content -->
+
+      </main><!-- /#main -->
+    </div> <!-- /#main-wrapper -->
+
+    <!-- Footer Page -->
+<div class="footer footer-wrapper">
+
+  
+<div class="panel-display footer clearfix " id="mini-panel-footer">
+  <section class="section">
+    
+    <div class="footer-top container">
+      <div class="row">
+        <div class="col-md-10 col-xs-12 footer-top-left">
+          <div class="panel-pane pane-custom pane-9" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="logo">
+	              <a href="/" title="International Foundation for Electoral Systems" rel="home" id="logo">
+	                <img src="/sites/all/themes/ifes_2020/images/logo-vector.svg" alt="International Foundation for Electoral Systems" class="img-responsive">
+	              </a>
+	            </div>  </div>
+
+  
+  </div>
+        </div>
+        <div class="col-md-2 col-xs-12 footer-top-right">
+          <div class="panel-pane pane-custom pane-10" >
+  
+      
+  
+  <div class="pane-content">
+    <nav class="nav-social">
+	        		<ul class="nolist">
+	        			<li>
+		          		<a href="https://twitter.com/IFES1987" target="_blank"><i class="fa fa-twitter"></i></a>
+		          	</li>
+	        			<li>
+									<a href="https://www.facebook.com/IFES1987" target="_blank"><i class="fa fa-facebook"></i></a>
+								</li>
+		          	<li>
+		          		<a href="https://www.linkedin.com/company/the-international-foundation-for-electoral-systems" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+		          	</li>
+		          	<li>
+		          		<a href="https://www.youtube.com/user/IFES87" target="_blank"><i class="fa fa-youtube-play"></i></a>
+		          	</li>
+		          </ul>
+		        </nav>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+    </div> <!-- /.footer-top -->
+    
+    <div class="footer-bottom container">
+      <div class="row">
+        <div class="col-md-10 col-xs-12 footer-bottom-left">
+          <div class="panel-pane pane-menu-tree pane-main-menu col-md-3 col-sm-3 col-xs-12" >
+  
+        <h4 class="pane-title"><a href="/node/64">Who We Are</a></h4>
+    
+  
+  <div class="pane-content">
+    <div class="menu-block-wrapper menu-block-ctools-main-menu-1 menu-name-main-menu parent-mlid-1335 menu-level-1">
+  <ul class="menu clearfix"><li class="first leaf menu-mlid-30978"><a href="/who-we-are">Vision and Mission</a></li>
+<li class="leaf menu-mlid-2964"><a href="/who-we-are/board">Board</a></li>
+<li class="leaf menu-mlid-3031"><a href="/who-we-are/leadership">Leadership</a></li>
+<li class="leaf menu-mlid-1324"><a href="/who-we-are/experts">Experts</a></li>
+<li class="leaf menu-mlid-1972"><a href="/who-we-are/feature-articles">Feature Articles</a></li>
+<li class="leaf menu-mlid-3812"><a href="/who-we-are/events">Events</a></li>
+<li class="leaf menu-mlid-2018"><a href="/who-we-are/awards">Awards</a></li>
+<li class="leaf menu-mlid-2019"><a href="https://donate.ifes.org/donate">Donate</a></li>
+<li class="leaf menu-mlid-2020"><a href="/who-we-are/contact">Contact</a></li>
+<li class="last leaf menu-mlid-30953"><a href="/newsroom">Newsroom</a></li>
+</ul></div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-menu-tree pane-main-menu col-md-3 col-sm-3 col-xs-12" >
+  
+        <h4 class="pane-title"><a href="/node/59">What We Do</a></h4>
+    
+  
+  <div class="pane-content">
+    <div class="menu-block-wrapper menu-block-ctools-main-menu-2 menu-name-main-menu parent-mlid-1321 menu-level-1">
+  <ul class="menu clearfix"><li class="first leaf menu-mlid-30954"><a href="/issues/anti-corruption">Anti-Corruption</a></li>
+<li class="leaf menu-mlid-7268"><a href="/issues/electoral-management">Electoral Management</a></li>
+<li class="leaf menu-mlid-30227"><a href="/issues/electoral-law">Electoral Law</a></li>
+<li class="leaf menu-mlid-1876"><a href="/issues/participation-and-inclusion">Participation and Inclusion</a></li>
+<li class="leaf menu-mlid-7269"><a href="/issues/research-and-publications">Research and Publications</a></li>
+<li class="last leaf menu-mlid-1896"><a href="/cepps">CEPPS</a></li>
+</ul></div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-menu-tree pane-main-menu col-md-3 col-sm-3 col-xs-12" >
+  
+        <h4 class="pane-title"><a href="/node/60">Where We Work</a></h4>
+    
+  
+  <div class="pane-content">
+    <div class="menu-block-wrapper menu-block-ctools-main-menu-3 menu-name-main-menu parent-mlid-1322 menu-level-1">
+  <ul class="menu clearfix"><li class="first leaf menu-mlid-1892"><a href="/africa">Africa</a></li>
+<li class="leaf menu-mlid-1893"><a href="/americas">Americas</a></li>
+<li class="leaf menu-mlid-1991"><a href="/asia-pacific">Asia-Pacific</a></li>
+<li class="leaf menu-mlid-1894"><a href="/europe-eurasia">Europe and Eurasia</a></li>
+<li class="leaf menu-mlid-1895"><a href="/middle-east-and-north-africa">Middle East and North Africa</a></li>
+<li class="leaf menu-mlid-2230"><a href="/regions/view-all-countries">View All Countries</a></li>
+<li class="last leaf menu-mlid-30939"><a href="/interactive-map">Map</a></li>
+</ul></div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-menu-tree pane-main-menu col-md-3 col-sm-3 col-xs-12" >
+  
+        <h4 class="pane-title"><a href="/node/63">Work With Us</a></h4>
+    
+  
+  <div class="pane-content">
+    <div class="menu-block-wrapper menu-block-ctools-main-menu-4 menu-name-main-menu parent-mlid-1325 menu-level-1">
+  <ul class="menu clearfix"><li class="first leaf menu-mlid-1899"><a href="/work-us/careers">Careers</a></li>
+<li class="leaf menu-mlid-1897"><a href="/work-us/partnerships">Partnerships</a></li>
+<li class="leaf menu-mlid-1898"><a href="/work-us/business-opportunities">Business Opportunities</a></li>
+<li class="last leaf menu-mlid-1900"><a href="/work-us/fellowships">Fellowships</a></li>
+</ul></div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-custom pane-11" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="gstar-logo"><a href="https://www.guidestar.org/organizations/52-1527835/international-foundation-electoral-systems.aspx" target="_blank">
+    <img src="https://widgets.guidestar.org/gximage2?o=7770913&l=v4"  width="88" height="88"/>
+</a>
+</div>  </div>
+
+  
+  </div>
+        </div>
+        <div class="col-md-2 col-xs-12 footer-bottom-right">
+          <div class="panel-pane pane-custom pane-12 logo-address-footer" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="address-footer">
+IFES Headquarters<br>
+2011 Crystal Drive<br>
+Arlington, VA 22202 USA<br/>
++1.202.350.6700<br>
+</div>
+<hr>
+<div class="copy-footer">
+<a href="/privacy-policy">Privacy Policy </a><br/>
+<a href="/sitemap">Site Map</a><br/>
+<a href="/terms-and-conditions">Terms and Conditions</a><br/>
+<a href="/node/75">Ethics and Compliance</a><br/>
+Copyright © 2021 IFES
+</div>  </div>
+
+  
+  </div>
+        </div>
+      </div>
+    </div> <!-- /.footer-bottom -->
+
+    </section>
+</div><!-- /.base -->
+
+</div> 
+<!-- /#Footer Page -->    
+    <!-- Newsletter popup start -->
+    <!--<link href="https://donate.ifes.org/salsa/include/css/dia/api/salsa.css" type="text/css" rel="stylesheet" />
+    <div id="newsletter-popup" class="salsa" style="display:none;">
+      <form method="POST" action="https://donate.ifes.org/save" name="data">
+        <style type="text/css">
+          .memberSignup {
+            display: none;
+          }
+
+          .selectallbox {
+            font-weight: bold;
+          }
+
+          .salsa ul li {
+            background-image: none !important;
+          }
+        </style>
+        <div class="memberSignup"><input value="" name="first_name_51388" /></div>
+        <h1>Subscribe to receive the latest e-news from IFES, including election FAQs and special announcements!</h1>
+        <script language="JavaScript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <div class="supporterInfo"><input type="hidden" value="supporter" name="table" />
+          <div class="diaFields"><input type="hidden" value="0" name="key" />
+            <div class="clear"></div>
+            <div class="formRow"><label for="f1">Email<span class="required">*</span></label>
+              <script type="text/javascript">
+                function validateEmail(email) {
+                  if (email == "") return;
+                  var re = /^[_a-zA-Z0-9!#$%&'*+/=?^`{|}~-]+(\.[_a-zA-Z0-9&'!#$%&'*+/=?^`{|}~-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{1,})*\.([a-zA-Z]{2,}){1}$/;
+
+                  if (!re.test(email)) {
+                    $("div[id='emailValidationErrorId']").html("<span class='required'>Please enter a valid email address.</span>");
+                  } else {
+                    $("div[id='emailValidationErrorId']").html("");
+                  };
+                }
+              </script>
+              <div id="emailValidationErrorId"></div>
+              <input type="text" size="25" onblur="validateEmail(this.value)" value="" class="blockInput salsa_email" name="Email" id="f1" title="Email" />
+            </div>
+          </div>
+          <input type="hidden" value="http://donate.ifes.org/p/salsa/web/common/public/thankYou.sjs?key=73639466" name="redirect" />
+          <input type="hidden" value="Email" name="required" />
+        </div>
+        <input type="hidden" value="51388" name="organization_KEY" />
+        <input type="hidden" value="3" name="Receive_Email" />
+        <input type="hidden" value="" name="email_trigger_KEYS" />
+        <input type="hidden" name="link" value="groups" />
+        <input type="hidden" name="linkKey" value="172958" />
+        <div class="clear"></div>
+
+        <div id="tags"><input type="hidden" value="drupalpop-up" id="tag" name="tag" /></div>
+        <input type="hidden" value="" name="chapter_lookup" /> <br />
+        <div class="formRow"><input type="submit" class="dia_submit" value="Submit" id="submitSignup" /></div>
+      </form>
+      <p>By subscribing you agree to IFES’ <a href="/privacy-policy" target="_blank">Privacy Policy</a></p>
+    </div>
+    <a class="popup-trigger" data-fancybox data-touch="false" data-src="#newsletter-popup" href="javascript:;" style="display:none;">Trigger the popup</a>-->
+    <!--Newsletter popup end -->
+  </div>
+</div> <!-- /#page, /#page-wrapper -->  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_widgets/panopoly-widgets.js?r39z46"></script>
+<script type="text/javascript" src="https://www.ifes.org/profiles/panopoly/modules/panopoly/panopoly_widgets/panopoly-widgets-spotlight.js?r39z46"></script>
+
+  <script type="text/javascript">var _baLocale = 'us', _baUseCookies = true, _baMode = 'TRANSLATE OR LISTEN', _baHiddenMode = false, _baHideOnLoad = false;</script>
+  <script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
+  <!-- <script>
+    //init iframe resizer
+    $('iframe').iFrameResize({
+      log                     : false,                  // Enable console logging
+      inPageLinks             : false,
+      checkOrigin             : false,
+      enablePublicMethods     : true,
+      heightCalculationMethod : 'lowestElement',
+      resizedCallback         : function(messageData){ // Callback fn when resize is received
+        //jQuery('p#callback').html(
+          //'<b>Frame ID:</b> '    + messageData.iframe.id +
+          //' <b>Height:</b> '     + messageData.height +
+          //' <b>Width:</b> '      + messageData.width +
+          //' <b>Event type:</b> ' + messageData.type
+        //);
+        console.log(messageData);
+      },
+      messageCallback         : function(messageData){ // Callback fn when message is received
+        //jQuery('p#callback').html(
+          //'<b>Frame ID:</b> '    + messageData.iframe.id +
+          //' <b>Message:</b> '    + messageData.message
+        //);
+        //console.log(
+          //'<b>Frame ID:</b> '    + messageData.iframe.id +
+          //' <b>Message:</b> '    + messageData.message
+        //);
+        //document.getElementsByTagName('iframe')[0].iFrameResizer.sendMessage('Hello back from parent page');
+      },
+      closedCallback         : function(id){ // Callback fn when iFrame is closed
+        //jQuery('p#callback').html(
+          //'<b>IFrame (</b>'    + id +
+          //'<b>) removed from page.</b>'
+        //);
+      }
+    });
+
+  </script> -->
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-a0818c27efaf0b38809","applicationID":"669230512","transactionName":"YlBVYUUDWBZZUhZYClsaYkdeTRkMVlUHSUtFXUc=","queueTime":0,"applicationTime":13,"atts":"ThdWFw0ZSxg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

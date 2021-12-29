@@ -1,0 +1,2669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["gov-bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ac1e88bca1",applicationID:"93306740"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon"      sizes="57x57"     href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon"      sizes="60x60"     href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon"      sizes="72x72"     href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon"      sizes="76x76"     href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon"      sizes="114x114"   href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon"      sizes="120x120"   href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon"      sizes="144x144"   href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon"      sizes="152x152"   href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon"      sizes="180x180"   href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"   href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"     href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"     href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"     href="/favicon/favicon-16x16.png">
+    <link rel="manifest"                                href="/manifest.json">
+    <meta name="msapplication-TileColor"                content="#ffffff">
+    <meta name="msapplication-config"                   content="/favicon/browserconfig.xml">
+    <meta name="msapplication-TileImage"                content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color"                            content="#ffffff">
+    <link rel="shortcut icon"                           href="/favicon/favicon.ico">
+    <!-- WebFontLoader - see https://github.com/typekit/webfontloader -->
+    <script>
+      WebFontConfig = {
+        // typekit: { id: 'tcx2fnb' },
+        google: { families: ['Open Sans Condensed:300,300italic,700:latin,cyrillic-ext,latin-ext,cyrillic', 'Open Sans:400italic,700italic,400,700:latin,cyrillic-ext,latin-ext,cyrillic', 'Merriweather:900']}
+      };
+      (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="OSCE Office for Democratic Institutions and Human Rights" />
+<meta property="og:description" content="The OSCE Office for Democratic Institutions and Human Rights (ODIHR) provides support, assistance and expertise to participating States and civil society to promote democracy, rule of law, human rights and tolerance and non-discrimination." />
+<meta property="og:image" content="https://www.osce.org/files/imagecache/10_large_gallery/f/images/hires/b/5/330391.jpg?1517413858" />
+<meta name="description" content="The OSCE Office for Democratic Institutions and Human Rights (ODIHR) provides support, assistance and expertise to participating States and civil society to promote democracy, rule of law, human rights and tolerance and non-discrimination." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://www.osce.org/odihr" />
+<meta property="og:url" content="https://www.osce.org/odihr" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@osce_odihr" />
+    <link type="text/css" rel="stylesheet" media="all" href="https://www.osce.org/files/css/css_48ba473d217fbcd6c95d631d8116bf16.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="https://www.osce.org/files/css/css_69803446130bf6adc90f1f029fae83c6.css" />
+<link type="text/css" rel="stylesheet" media="print" href="https://www.osce.org/files/css/css_8cd991679f397de62e166697d5b7de60.css" />
+        <link href="/sites/default/themes/osce_tao/stylesheets/osce-tao.css?h=07e6e4f6376270c64f60707459154dcf" media="all" rel="stylesheet" type="text/css">
+    <link href="/sites/default/themes/osce_tao/stylesheets/osce-tao.print.css?h=07e6e4f6376270c64f60707459154dcf" media="print" rel="stylesheet" type="text/css">
+    <meta name="yandex-verification" content="1e978b0ff7fac12a" />
+    <script type="text/javascript" src="https://www.osce.org/files/js/js_6bebe1bfc62a6eefa0dbf0dd433e55d4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"extlink":{"extTarget":"_blank","extClass":0,"extSubdomains":1,"extExclude":"","extInclude":"(admin\\\/osce_help)","extCssExclude":"","extCssExplicit":"#admin-menu","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0},"views":{"ajax_path":["\/views\/ajax","\/views\/ajax","\/views\/ajax","\/views\/ajax","\/views\/ajax"],"ajaxViews":[{"view_name":"node_latest_stories","view_display_id":"panel_pane_7","view_args":"109233","view_path":"node\/109233","view_base_path":null,"view_dom_id":"fe4e46e796300e0ca1231a094f839ede","pager_element":0},{"view_name":"node_latest_stories","view_display_id":"panel_pane_8","view_args":"109233","view_path":"node\/109233","view_base_path":null,"view_dom_id":"3eef1aff47d50f7cc7a81881e4f10b41","pager_element":0},{"view_name":"node_multimedia","view_display_id":"panel_pane_1","view_args":"109233","view_path":"node\/109233","view_base_path":null,"view_dom_id":"d2e2eb8c3c8c514d64b8af2989f2b1dd","pager_element":0},{"view_name":"taxonomy_news","view_display_id":"embed_2","view_args":"24","view_path":"node\/109233","view_base_path":null,"view_dom_id":"609d1cc8c20ac0290ab6deac0baafb1a","pager_element":""},{"view_name":"taxonomy_news","view_display_id":"embed_2","view_args":"24","view_path":"node\/109233","view_base_path":null,"view_dom_id":"2b4f3414930fc5ef438e0f4617b4747f","pager_element":""}]},"CToolsUrlIsAjaxTrusted":{"\/odihr":true},"gsearch":{"gsearch_id":"016235372030844727130%3Afs_f_dbyv08"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDomainMode":"1"},"osce_click_blocker":{"selectors":".site--top a\r\n.site--header--wrapper a\r\n.site--navigation a\r\n.site--footer--wrapper a\r\nbody.page-manager-active ul.links.primary-tabs a"},"jsInit":{"misc\/jquery.js":true,"misc\/jquery-extend-3.4.0.js":true,"misc\/jquery-html-prefilter-3.5.0-backport.js":true,"misc\/drupal.js":true,"sites\/default\/modules\/contrib\/views_slideshow_ddblock\/js\/views_slideshow_ddblock.admin.js":true,"sites\/default\/modules\/d6lts\/panels\/js\/panels.js":true,"sites\/default\/modules\/d6lts\/views_slideshow\/js\/jquery.cycle.all.min.js":true,"sites\/default\/modules\/d6lts\/views_slideshow\/contrib\/views_slideshow_singleframe\/views_slideshow.js":true,"sites\/default\/modules\/d6lts\/views_slideshow\/contrib\/views_slideshow_thumbnailhover\/views_slideshow.js":true,"sites\/default\/modules\/contrib\/extlink\/extlink.js":true,"sites\/default\/modules\/contrib\/gmap\/js\/gmap_views_ajax.js":true,"sites\/default\/modules\/d6lts\/views\/js\/base.js":true,"sites\/default\/modules\/d6lts\/views\/js\/ajax_view.js":true,"sites\/default\/modules\/custom\/osce_panes\/social-sharing.js":true,"sites\/default\/modules\/custom\/osce_panes\/gsearch.js":true,"sites\/default\/modules\/d6lts\/google_analytics\/googleanalytics.js":true,"sites\/default\/modules\/custom\/osce_click_blocker\/osce_click_blocker.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery-1.10.2.prototype-pollution-patch.min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery-migrate-1.2.1.min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery-ui-1.10.3.custom.min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery.flexslider.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/underscore-min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/media.match.min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/enquire.min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery.matchHeight-min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery.cookie.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery.magnific-popup.min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/jquery.qtip.js":true,"sites\/default\/themes\/osce_tao\/javascript\/osce-tao.js":true,"sites\/default\/themes\/osce_tao\/javascript\/osce-celebration.js":true,"sites\/default\/themes\/osce_tao\/javascript\/libraries\/selectivizr-min.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-collapsible.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-collapsible-box.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-accordion.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-tabs.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-discardable.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-carousel.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/language-switch.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/slideshow.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-news-ticker.js":true,"sites\/default\/themes\/osce_tao\/javascript\/components\/osce-equalize.js":true,"sites\/default\/themes\/tao\/js\/tao.js":true,"sites\/default\/modules\/custom\/osce_slick\/config\/sg-images.js":true,"sites\/default\/modules\/custom\/osce_slick\/slick\/slick.js":true,"sites\/default\/modules\/custom\/osce_slick\/osce_slick.js":true,"sites\/default\/modules\/custom\/osce_slick\/config\/frontpage-text.js":true,"sites\/default\/modules\/custom\/osce_slick\/config\/related-stories.js":true},"cssInit":{"node.css":true,"defaults.css":true,"system.css":true,"system-menus.css":true,"user.css":true,"content-module.css":true,"ctools.css":true,"date.css":true,"jquery-ui.css":true,"datepicker.css":true,"jquery.timeentry.css":true,"filefield.css":true,"panels.css":true,"views_slideshow.css":true,"extlink.css":true,"fieldgroup.css":true,"views.css":true,"osce_content.layout.css":true,"osce_naked.layout.css":true,"osce_figure.layout.css":true,"onecol.css":true,"osce_site.layout.css":true,"admin.css":true,"block.css":true,"book.css":true,"comment.css":true,"dblog.css":true,"forum.css":true,"help.css":true,"maintenance.css":true,"openid.css":true,"poll.css":true,"profile.css":true,"search.css":true,"taxonomy.css":true,"tracker.css":true,"update.css":true,"magnific-popup.css":true,"jquery.qtip.css":true}});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-2170577-1", {"cookieDomain":".www.osce.org"});ga("set", "dimension1", "Page");ga("set", "dimension2", "Homepage 2015");ga("set", "dimension4", "24");ga("send", "pageview");
+//--><!]]>
+</script>
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="/sites/default/themes/osce_tao/stylesheets/osce-tao-legacy.css" />
+    <![endif]-->
+    <title>OSCE Office for Democratic Institutions and Human Rights | OSCE</title>
+    <script type="text/javascript" src="/sites/default/themes/osce_tao/javascript/libraries/modernizr.js"></script>
+    <!--
+    <script type='text/javascript'>(function () {function loadWebreep() {var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = 'https://api.webreep.com/Feedback/Get/5c613ec6-e3c1-441f-8b98-03a1f2e6957d';var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);}if (window.attachEvent) {window.attachEvent('onload', loadWebreep);} else {window.addEventListener('load', loadWebreep, false);}})();</script>
+    -->
+  </head>
+  <body  class="not-front not-logged-in page-node node-type-page no-sidebars page-manager-active page-manager-homepage-2015 item-type-homepage_2015 i18n-en tao">
+  <a id='skipnav' href='#content'>Skip navigation</a>  <div class="site ">
+          <div aria-hidden="true" tabindex="-1" role="presentation" class="site--mobile">
+      <div class="site--top">
+                <div class="site--multilingual-links"></div>
+                <div class="site--ticker">
+                  </div>
+      </div>
+      <div id="multilingual-mobile" style="display: none">
+              </div>
+
+      <div class="site--header">
+        <div class="site--logo">
+          <div class="site--name-and-slogan logo--default">
+  <div class="logo media--print">
+    <img src="/sites/default/themes/osce_tao/images/logo%402x.png"/>
+  </div>
+      <p class="site--name media--screen">
+      <a href="/" title="Home" rel="home"><span>OSCE</span></a>
+    </p>
+        <div class="site--slogan">Organization for Security and Co-operation in Europe</div>
+  </div>
+        </div>
+
+        <div class="site--mobile--toggles">
+          <div class="site--navigation-toggle">
+            <a href="#navigation-mobile" title="Navigation"><i></i><span>Navigation</span></a>
+          </div>
+
+          <div class="site--search-toggle">
+            <a href="#search-mobile" title="Search"><i></i><span>Search</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site--overlay">
+        <div id="navigation-mobile">
+          <div class="panel-pane pane-block pane-menu-menu-main-navigation main-menu" >
+  
+      <h2 class="pane-title">Navigation</h2>
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first"><a href="/" title="" hreflang="en">Home</a></li>
+<li class="expanded"><a href="/who-we-are" hreflang="en" class="has-children">Who we are</a><ul class="menu"><li class="leaf first"><a href="/whatistheosce" hreflang="en">What is the OSCE?</a></li>
+<li class="leaf"><a href="/participating-states" hreflang="en">Participating States</a></li>
+<li class="leaf"><a href="/partners-for-cooperation" hreflang="en">Partners for Co-operation</a></li>
+<li class="leaf"><a href="/chairmanship" hreflang="en">Chairmanship</a></li>
+<li class="leaf"><a href="/summits" hreflang="en">Summits</a></li>
+<li class="leaf"><a href="/ministerial-councils" hreflang="en">Ministerial Councils</a></li>
+<li class="leaf"><a href="/permanent-council" hreflang="en">Permanent Council</a></li>
+<li class="leaf"><a href="/forum-for-security-cooperation" hreflang="en">Forum for Security Co-operation</a></li>
+<li class="leaf"><a href="/leadership" hreflang="en">Leadership</a></li>
+<li class="leaf"><a href="/related-bodies" hreflang="en">OSCE-related bodies</a></li>
+<li class="leaf"><a href="/funding-and-budget" hreflang="en">Funding and budget</a></li>
+<li class="leaf last"><a href="/history" hreflang="en">History</a></li>
+</ul></li>
+<li class="expanded"><a href="/what-we-do" hreflang="en" class="has-children">What we do</a><ul class="menu"><li class="leaf first"><a href="/arms-control" hreflang="en">Arms control</a></li>
+<li class="leaf"><a href="/border-management" hreflang="en">Border management</a></li>
+<li class="leaf"><a href="/combating-human-trafficking" hreflang="en">Combating human trafficking in human beings</a></li>
+<li class="leaf"><a href="/countering-terrorism" hreflang="en">Countering terrorism</a></li>
+<li class="leaf"><a href="/conflict-prevention-and-resolution" hreflang="en">Conflict prevention and resolution</a></li>
+<li class="leaf"><a href="/cyber-ict-security" hreflang="en">Cyber/ICT Security</a></li>
+<li class="leaf"><a href="/democratization" hreflang="en">Democratization</a></li>
+<li class="leaf"><a href="/economic-activities" hreflang="en">Economic activities</a></li>
+<li class="leaf"><a href="/education" hreflang="en">Education</a></li>
+<li class="leaf"><a href="/elections" hreflang="en">Elections</a></li>
+<li class="leaf"><a href="/environmental-activities" hreflang="en">Environmental activities</a></li>
+<li class="leaf"><a href="/gender-equality" hreflang="en">Gender equality</a></li>
+<li class="leaf"><a href="/good-governance" hreflang="en">Good governance</a></li>
+<li class="leaf"><a href="/human-rights" hreflang="en">Human rights</a></li>
+<li class="leaf"><a href="/media-freedom-and-development" hreflang="en">Media freedom and development</a></li>
+<li class="leaf"><a href="/migration" hreflang="en">Migration</a></li>
+<li class="leaf"><a href="/national-minority-issues" hreflang="en">National minority issues</a></li>
+<li class="leaf"><a href="/policing" hreflang="en">Policing</a></li>
+<li class="leaf"><a href="/reform-and-cooperation-in-the-security-sector" hreflang="en">Reform and co-operation in the security sector</a></li>
+<li class="leaf"><a href="/roma-and-sinti" hreflang="en">Roma and Sinti</a></li>
+<li class="leaf"><a href="/rule-of-law" hreflang="en">Rule of law</a></li>
+<li class="leaf"><a href="/tolerance-and-nondiscrimination" hreflang="en">Tolerance and non-discrimination</a></li>
+<li class="leaf"><a href="/youth" hreflang="en">Youth</a></li>
+<li class="leaf last"><a href="/sustainable-development-goals" class="menu-item-multiline" hreflang="en">#GLOBALGOALS - The OSCE and the Sustainable Development Goals</a></li>
+</ul></li>
+<li class="expanded"><a href="/where-we-are" hreflang="en" class="has-children">Where we are</a><ul class="menu"><li class="leaf first"><a href="/presence-in-albania" hreflang="en">Presence in Albania</a></li>
+<li class="leaf"><a href="/mission-to-bosnia-and-herzegovina" hreflang="en">Mission to Bosnia and Herzegovina</a></li>
+<li class="leaf"><a href="/mission-in-kosovo" hreflang="en">Mission in Kosovo</a></li>
+<li class="leaf"><a href="/mission-to-montenegro" hreflang="en">Mission to Montenegro</a></li>
+<li class="leaf"><a href="/mission-to-serbia" hreflang="en">Mission to Serbia</a></li>
+<li class="leaf"><a href="/mission-to-skopje" hreflang="en">Mission to Skopje</a></li>
+<li class="leaf"><a href="/mission-to-moldova" hreflang="en">Mission to Moldova</a></li>
+<li class="leaf"><a href="/project-coordinator-in-ukraine" hreflang="en">Project Co-ordinator in Ukraine</a></li>
+<li class="leaf"><a href="/special-monitoring-mission-to-ukraine" hreflang="en">Special Monitoring Mission to Ukraine</a></li>
+<li class="leaf"><a href="/cio/andrzej-kasprzyk" class="menu-item-multiline" hreflang="en">Personal Representative of the Chairperson-in-Office on the conflict dealt with by the OSCE Minsk Conference</a></li>
+<li class="leaf"><a href="/centre-in-ashgabat" hreflang="en">Centre in Ashgabat</a></li>
+<li class="leaf"><a href="/programme-office-in-nur-sultan" hreflang="en">Programme Office in Nur-Sultan</a></li>
+<li class="leaf"><a href="/programme-office-in-bishkek" hreflang="en">Programme Office in Bishkek</a></li>
+<li class="leaf"><a href="/programme-office-in-dushanbe" hreflang="en">Programme Office in Dushanbe</a></li>
+<li class="leaf"><a href="/project-coordinator-in-uzbekistan" hreflang="en">Project Co-ordinator in Uzbekistan</a></li>
+<li class="leaf last"><a href="/closed-field-operations" hreflang="en">Closed field operations</a></li>
+</ul></li>
+<li class="expanded active-trail"><a href="/institutions-and-structures" hreflang="en" class="has-children">Institutions &amp; structures</a><ul class="menu"><li class="leaf first"><a href="http://www.oscepa.org/" title="" hreflang="en">Parliamentary Assembly</a></li>
+<li class="leaf"><a href="/hcnm" title="" hreflang="en">High Commissioner on National Minorities</a></li>
+<li class="leaf active-trail"><a href="/odihr" title="" hreflang="en" class="active">Office for Democratic Institutions and Human Rights</a></li>
+<li class="leaf"><a href="/representative-on-freedom-of-media" title="" hreflang="en">Representative on Freedom of the Media</a></li>
+<li class="leaf"><a href="/cca" title="" hreflang="en">Court of Conciliation and Arbitration</a></li>
+<li class="leaf"><a href="/mg" title="" hreflang="en">Minsk Group</a></li>
+<li class="leaf last"><a href="/secretariat" title="" hreflang="en">Secretariat</a></li>
+</ul></li>
+<li class="expanded last"><a href="/resources" hreflang="en" class="has-children">Resources</a><ul class="menu"><li class="leaf first"><a href="/resources/csce-osce-key-documents" hreflang="en">CSCE/OSCE key documents</a></li>
+<li class="leaf"><a href="/resources/documents/decision-making-bodies" hreflang="en">Documents by the OSCE Decision-making bodies</a></li>
+<li class="leaf"><a href="/resources/documents" title="" hreflang="en">Documents library</a></li>
+<li class="leaf"><a href="/resources/publications" title="" hreflang="en">Publications</a></li>
+<li class="leaf"><a href="/press-releases" title="" hreflang="en">Press releases and news archive</a></li>
+<li class="leaf"><a href="/resources/multimedia" title="" hreflang="en">Multimedia</a></li>
+<li class="leaf"><a href="/resources/e-libraries" title="" hreflang="en">E-libraries</a></li>
+<li class="leaf"><a href="/resources/126378" title="" hreflang="en">Quarterly Selections</a></li>
+<li class="leaf last"><a href="/osce-social-media" hreflang="en">Social media</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+  </div>
+          <div class="panel-pane pane-block pane-menu-menu-meta-navigation meta-menu" >
+  
+      <h2 class="pane-title">0Meta Navigation</h2>
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first"><a href="/press" hreflang="en">Newsroom</a></li>
+<li class="leaf"><a href="/blog" hreflang="en">Blog</a></li>
+<li class="leaf"><a href="/magazine" hreflang="en">Magazine</a></li>
+<li class="leaf"><a href="/meetings-events" hreflang="en">Events</a></li>
+<li class="leaf"><a href="/partnerships" hreflang="en">Partnerships</a></li>
+<li class="leaf"><a href="/networks" hreflang="en">Networks</a></li>
+<li class="leaf last"><a href="/search/pages" hreflang="en">Search</a></li>
+</ul>  </div>
+
+  
+  </div>
+        </div>
+        <div id="search-mobile" class="site--search">
+          <gcse:searchbox-only></gcse:searchbox-only>        </div>
+      </div>
+    </div>
+  
+  <div class="site--desktop">
+
+    <div class="site--top">
+            <div class="site--multilingual-links"></div>
+            <div class="site--ticker">
+              </div>
+    </div>
+
+    
+
+    <div class="site--header--wrapper">
+      <div class="site--header">
+        <div class="site--logo">
+          <div class="site--name-and-slogan logo--default">
+  <div class="logo media--print">
+    <img src="/sites/default/themes/osce_tao/images/logo%402x.png"/>
+  </div>
+      <p class="site--name media--screen">
+      <a href="/" title="Home" rel="home"><span>OSCE</span></a>
+    </p>
+        <div class="site--slogan">Organization for Security and Co-operation in Europe</div>
+  </div>
+        </div>
+
+        <div class="site--meta">
+          <div class="panel-pane pane-block pane-menu-menu-meta-navigation meta-menu" >
+  
+      <h2 class="pane-title">0Meta Navigation</h2>
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first"><a href="/press" hreflang="en">Newsroom</a></li>
+<li class="leaf"><a href="/blog" hreflang="en">Blog</a></li>
+<li class="leaf"><a href="/magazine" hreflang="en">Magazine</a></li>
+<li class="leaf"><a href="/meetings-events" hreflang="en">Events</a></li>
+<li class="leaf"><a href="/partnerships" hreflang="en">Partnerships</a></li>
+<li class="leaf"><a href="/networks" hreflang="en">Networks</a></li>
+<li class="leaf last"><a href="/search/pages" hreflang="en">Search</a></li>
+</ul>  </div>
+
+  
+  </div>
+        </div>
+
+        <div class="site--search">
+          <gcse:searchbox-only></gcse:searchbox-only>          <a id="site--search-close" href="#">&times; Close search</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="site--navigation--wrapper">
+      <div class="site--navigation">
+        <div class="panel-pane pane-block pane-menu-menu-main-navigation main-menu" >
+  
+      <h2 class="pane-title">Navigation</h2>
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first"><a href="/" title="" hreflang="en">Home</a></li>
+<li class="expanded"><a href="/who-we-are" hreflang="en" class="has-children">Who we are</a><ul class="menu"><li class="leaf first"><a href="/whatistheosce" hreflang="en">What is the OSCE?</a></li>
+<li class="leaf"><a href="/participating-states" hreflang="en">Participating States</a></li>
+<li class="leaf"><a href="/partners-for-cooperation" hreflang="en">Partners for Co-operation</a></li>
+<li class="leaf"><a href="/chairmanship" hreflang="en">Chairmanship</a></li>
+<li class="leaf"><a href="/summits" hreflang="en">Summits</a></li>
+<li class="leaf"><a href="/ministerial-councils" hreflang="en">Ministerial Councils</a></li>
+<li class="leaf"><a href="/permanent-council" hreflang="en">Permanent Council</a></li>
+<li class="leaf"><a href="/forum-for-security-cooperation" hreflang="en">Forum for Security Co-operation</a></li>
+<li class="leaf"><a href="/leadership" hreflang="en">Leadership</a></li>
+<li class="leaf"><a href="/related-bodies" hreflang="en">OSCE-related bodies</a></li>
+<li class="leaf"><a href="/funding-and-budget" hreflang="en">Funding and budget</a></li>
+<li class="leaf last"><a href="/history" hreflang="en">History</a></li>
+</ul></li>
+<li class="expanded"><a href="/what-we-do" hreflang="en" class="has-children">What we do</a><ul class="menu"><li class="leaf first"><a href="/arms-control" hreflang="en">Arms control</a></li>
+<li class="leaf"><a href="/border-management" hreflang="en">Border management</a></li>
+<li class="leaf"><a href="/combating-human-trafficking" hreflang="en">Combating human trafficking in human beings</a></li>
+<li class="leaf"><a href="/countering-terrorism" hreflang="en">Countering terrorism</a></li>
+<li class="leaf"><a href="/conflict-prevention-and-resolution" hreflang="en">Conflict prevention and resolution</a></li>
+<li class="leaf"><a href="/cyber-ict-security" hreflang="en">Cyber/ICT Security</a></li>
+<li class="leaf"><a href="/democratization" hreflang="en">Democratization</a></li>
+<li class="leaf"><a href="/economic-activities" hreflang="en">Economic activities</a></li>
+<li class="leaf"><a href="/education" hreflang="en">Education</a></li>
+<li class="leaf"><a href="/elections" hreflang="en">Elections</a></li>
+<li class="leaf"><a href="/environmental-activities" hreflang="en">Environmental activities</a></li>
+<li class="leaf"><a href="/gender-equality" hreflang="en">Gender equality</a></li>
+<li class="leaf"><a href="/good-governance" hreflang="en">Good governance</a></li>
+<li class="leaf"><a href="/human-rights" hreflang="en">Human rights</a></li>
+<li class="leaf"><a href="/media-freedom-and-development" hreflang="en">Media freedom and development</a></li>
+<li class="leaf"><a href="/migration" hreflang="en">Migration</a></li>
+<li class="leaf"><a href="/national-minority-issues" hreflang="en">National minority issues</a></li>
+<li class="leaf"><a href="/policing" hreflang="en">Policing</a></li>
+<li class="leaf"><a href="/reform-and-cooperation-in-the-security-sector" hreflang="en">Reform and co-operation in the security sector</a></li>
+<li class="leaf"><a href="/roma-and-sinti" hreflang="en">Roma and Sinti</a></li>
+<li class="leaf"><a href="/rule-of-law" hreflang="en">Rule of law</a></li>
+<li class="leaf"><a href="/tolerance-and-nondiscrimination" hreflang="en">Tolerance and non-discrimination</a></li>
+<li class="leaf"><a href="/youth" hreflang="en">Youth</a></li>
+<li class="leaf last"><a href="/sustainable-development-goals" class="menu-item-multiline" hreflang="en">#GLOBALGOALS - The OSCE and the Sustainable Development Goals</a></li>
+</ul></li>
+<li class="expanded"><a href="/where-we-are" hreflang="en" class="has-children">Where we are</a><ul class="menu"><li class="leaf first"><a href="/presence-in-albania" hreflang="en">Presence in Albania</a></li>
+<li class="leaf"><a href="/mission-to-bosnia-and-herzegovina" hreflang="en">Mission to Bosnia and Herzegovina</a></li>
+<li class="leaf"><a href="/mission-in-kosovo" hreflang="en">Mission in Kosovo</a></li>
+<li class="leaf"><a href="/mission-to-montenegro" hreflang="en">Mission to Montenegro</a></li>
+<li class="leaf"><a href="/mission-to-serbia" hreflang="en">Mission to Serbia</a></li>
+<li class="leaf"><a href="/mission-to-skopje" hreflang="en">Mission to Skopje</a></li>
+<li class="leaf"><a href="/mission-to-moldova" hreflang="en">Mission to Moldova</a></li>
+<li class="leaf"><a href="/project-coordinator-in-ukraine" hreflang="en">Project Co-ordinator in Ukraine</a></li>
+<li class="leaf"><a href="/special-monitoring-mission-to-ukraine" hreflang="en">Special Monitoring Mission to Ukraine</a></li>
+<li class="leaf"><a href="/cio/andrzej-kasprzyk" class="menu-item-multiline" hreflang="en">Personal Representative of the Chairperson-in-Office on the conflict dealt with by the OSCE Minsk Conference</a></li>
+<li class="leaf"><a href="/centre-in-ashgabat" hreflang="en">Centre in Ashgabat</a></li>
+<li class="leaf"><a href="/programme-office-in-nur-sultan" hreflang="en">Programme Office in Nur-Sultan</a></li>
+<li class="leaf"><a href="/programme-office-in-bishkek" hreflang="en">Programme Office in Bishkek</a></li>
+<li class="leaf"><a href="/programme-office-in-dushanbe" hreflang="en">Programme Office in Dushanbe</a></li>
+<li class="leaf"><a href="/project-coordinator-in-uzbekistan" hreflang="en">Project Co-ordinator in Uzbekistan</a></li>
+<li class="leaf last"><a href="/closed-field-operations" hreflang="en">Closed field operations</a></li>
+</ul></li>
+<li class="expanded active-trail"><a href="/institutions-and-structures" hreflang="en" class="has-children">Institutions &amp; structures</a><ul class="menu"><li class="leaf first"><a href="http://www.oscepa.org/" title="" hreflang="en">Parliamentary Assembly</a></li>
+<li class="leaf"><a href="/hcnm" title="" hreflang="en">High Commissioner on National Minorities</a></li>
+<li class="leaf active-trail"><a href="/odihr" title="" hreflang="en" class="active">Office for Democratic Institutions and Human Rights</a></li>
+<li class="leaf"><a href="/representative-on-freedom-of-media" title="" hreflang="en">Representative on Freedom of the Media</a></li>
+<li class="leaf"><a href="/cca" title="" hreflang="en">Court of Conciliation and Arbitration</a></li>
+<li class="leaf"><a href="/mg" title="" hreflang="en">Minsk Group</a></li>
+<li class="leaf last"><a href="/secretariat" title="" hreflang="en">Secretariat</a></li>
+</ul></li>
+<li class="expanded last"><a href="/resources" hreflang="en" class="has-children">Resources</a><ul class="menu"><li class="leaf first"><a href="/resources/csce-osce-key-documents" hreflang="en">CSCE/OSCE key documents</a></li>
+<li class="leaf"><a href="/resources/documents/decision-making-bodies" hreflang="en">Documents by the OSCE Decision-making bodies</a></li>
+<li class="leaf"><a href="/resources/documents" title="" hreflang="en">Documents library</a></li>
+<li class="leaf"><a href="/resources/publications" title="" hreflang="en">Publications</a></li>
+<li class="leaf"><a href="/press-releases" title="" hreflang="en">Press releases and news archive</a></li>
+<li class="leaf"><a href="/resources/multimedia" title="" hreflang="en">Multimedia</a></li>
+<li class="leaf"><a href="/resources/e-libraries" title="" hreflang="en">E-libraries</a></li>
+<li class="leaf"><a href="/resources/126378" title="" hreflang="en">Quarterly Selections</a></li>
+<li class="leaf last"><a href="/osce-social-media" hreflang="en">Social media</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+  </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  
+      <div class="site--breadcrumbs--wrapper">
+      <div class="site--breadcrumbs">
+        <div class="panel-pane pane-page-breadcrumb" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="breadcrumbs"><a href="/">Home</a><span class="breadcrumbs-seperator"></span> <a href="/institutions-and-structures">Institutions &amp; structures</a><span class="breadcrumbs-seperator"></span> <span >OSCE Office for Democratic Institutions and Human Rights</span></div>  </div>
+
+  
+  </div>
+      </div>
+    </div>
+  
+  
+  
+  <div class="site--content--wrapper">
+    <div class="site--content">
+      <div class="panel-pane pane-page-content" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="layout-content sidebar content-sidebar-top">
+      <div class="content--header">
+      <aside class="osce-box  osce-box-style-bar osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-panels_mini osce-box-social_sharing_and_contextual_1">
+  <header class="osce-box-header">
+              </header>
+  <div class="osce-box-content ">
+    <div class="panel-pane pane-panels-mini pane-social-media-contextual-links" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-views pane-social-media-contextual" >
+  
+      <h2 class="pane-title"><span>Follow <strong>ODIHR</strong></span></h2>
+  
+  
+  <div class="pane-content">
+    <div class="view view-social-media-contextual view-id-social_media_contextual view-display-id-default view-dom-id-social-media-contextual-default">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field-field-social-media-links-url">
+                <div class="field-content"><div class="field-item field-item-0"><a href="http://twitter.com/osce_odihr" 0="a:0:{}">Twitter</a></div><div class="field-item field-item-1"><a href="http://www.facebook.com/osce.odihr" 0="a:0:{}">Facebook</a></div><div class="field-item field-item-2"><a href="https://www.linkedin.com/company/41116" 0="a:0:{}">Linkedin</a></div></div>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-social-sharing" >
+  
+      <h2 class="pane-title"><span>Share</span></h2>
+  
+  
+  <div class="pane-content">
+    <ul class="osce-sharing-links"><li class="twitter first"><a href="http://twitter.com/share?text=OSCE%20Office%20for%20Democratic%20Institutions%20and%20Human%20Rights&amp;url=http%3A%2F%2Fwww.osce.org%2Fnode%2F109233" data-tracking-label="OSCE Office for Democratic Institutions and Human Rights (en) [109233]" data-tracking-category="twitter"><i class="icon-twitter"></i><span>Share on Twitter</span></a></li>
+<li class="facebook"><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[title]=OSCE%20Office%20for%20Democratic%20Institutions%20and%20Human%20Rights&amp;p[summary]=&amp;p[url]=http%3A%2F%2Fwww.osce.org%2Fnode%2F109233" data-tracking-label="OSCE Office for Democratic Institutions and Human Rights (en) [109233]" data-tracking-category="facebook"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+<li class="linkedin last"><a href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Fwww.osce.org%2Fnode%2F109233&amp;mini=1&amp;title=OSCE%20Office%20for%20Democratic%20Institutions%20and%20Human%20Rights" data-tracking-label="OSCE Office for Democratic Institutions and Human Rights (en) [109233]" data-tracking-category="linkedin"><i class="icon-linkedin"></i><span>Share on LinkedIn</span></a></li>
+</ul>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-lang-switch" >
+  
+  
+  
+  <div class="pane-content">
+    <ul class="osce-language-switch"><li class="node_translation_en active first last active"><a href="/odihr" title="OSCE Office for Democratic Institutions and Human Rights" class="translation-link active active" hreflang="en">English</a></li>
+</ul>  </div>
+
+  
+  </div>
+  </div>
+</aside>
+<div class="panel-pane pane-panels-mini pane-page-title-minipanel hp2015-title" >
+  
+  
+  
+  <div class="pane-content">
+    <h1>OSCE Office for Democratic Institutions and Human Rights</h1>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-views pane-logo hp2015-logo" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="view view-logo view-id-logo view-display-id-block_1 view-dom-id-cd85bf86a04fd2472a8f6c9195a376fb">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field-field-image-web-fid">
+                <span class="field-content"><img src="https://www.osce.org/files/imagecache/page_logo/f/images/hires/f/5/74808.jpg?1517402707" alt="" title="" width="299" height="171" class="imagecache imagecache-page_logo imagecache-default imagecache-page_logo_default"/></span>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+  </div>
+    </div>
+          <div class="content--sidebar-top">
+      <aside class="osce-box hp2015-news desktop osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-views osce-box-taxonomy_news osce-borderless">
+  <header class="osce-box-header">
+              <h2 class="osce-box-title"><span>News &amp; Events</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="view view-taxonomy-news view-id-taxonomy_news view-display-id-embed_2 view-dom-id-609d1cc8c20ac0290ab6deac0baafb1a">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/odihr/509498">Closure of Russian Memorial organizations of grave concern, OSCE Human Rights Head says</a></span>
+  </div>
+  
+  <span class="views-field-field-location-value">
+                <span class="field-content">WARSAW</span>
+  </span>
+      <span class="views-field-field-date-location-separator">, </span>  
+  <span class="views-field-field-date-value">
+                <span class="field-content"><span class="date-display-single">29 December 2021</span></span>
+  </span>
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/odihr/elections/508976">Moldova early parliamentary elections 2021: OSCE/ODIHR election observation mission final report</a></span>
+  </div>
+  
+  <span class="views-field-field-date-value">
+                <span class="field-content"><span class="date-display-single">22 December 2021</span></span>
+  </span>
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/press-releases?filters=+im_taxonomy_vid_1:(24)">View all News</a>    </div>
+  
+  
+</div>   </div>
+</aside>
+<aside class="osce-box hp2015-events desktop osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-views_panes osce-box-taxonomy_upcoming_events-panel_pane_6 osce-borderless">
+  <header class="osce-box-header">
+              </header>
+  <div class="osce-box-content ">
+    <div class="view view-taxonomy-upcoming-events view-id-taxonomy_upcoming_events view-display-id-panel_pane_6 view-dom-id-c7e926c0e3be1a5cd8a51cd187b6b122">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field-nothing">
+                <span class="field-content"><div class="date-box date-status-upcoming">
+<span class="month"><span class="date-display-start">21</span><span class="date-display-separator"> - </span><span class="date-display-end">25</span></span><span class="day"><span class="date-display-single">March</span></span>
+</div></span>
+  </div>
+  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/odihr/504754">Young Policy Advisers Course</a></span>
+  </div>
+  
+  <span class="views-field-field-event-date-value2">
+                <span class="field-content"><span class="date-display-single">21 March 2022</span></span>
+  </span>
+      <span class="views-field-field-date-location-separator">, </span>  
+  <span class="views-field-field-location-value">
+                <span class="field-content">online; should epidemiological conditions allow, the course will be held in Istanbul, Turkey</span>
+  </span>
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/events?filters=+im_taxonomy_vid_1:(24)+ds_field_event_date_end:([NOW/DAY-2HOUR%20TO%20*])&amp;solrsort=ds_field_event_date%20asc,ds_field_event_date_end%20asc&amp;rows=10">View all Events</a>    </div>
+  
+  
+</div>   </div>
+</aside>
+<div class="panel-pane pane-panels-mini pane-menu-institutions" >
+  
+  
+  
+  <div class="pane-content">
+    <aside class="osce-box  osce-box-style-black osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-block osce-box-menu-menu-institutions-and-structures">
+  <header class="osce-box-header">
+              <h2 class="osce-box-title"><a href="/institutions-and-structures" class="" >Institutions and Structures</a></h2>
+          </header>
+  <div class="osce-box-content ">
+    <ul class="menu"><li class="leaf first"><a href="http://www.oscepa.org/" title="" hreflang="en">Parliamentary Assembly</a></li>
+<li class="collapsed"><a href="/hcnm" hreflang="en" class="has-children">High Commissioner on National Minorities</a></li>
+<li class="expanded active-trail"><a href="/odihr" title="&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+" hreflang="en" class="has-children active">Office for Democratic Institutions and Human Rights</a><ul class="menu"><li class="expanded first"><a href="/odihr/who-we-are" hreflang="en" class="has-children">Who we are</a><ul class="menu"><li class="leaf first"><a href="/node/475457" hreflang="en">Director</a></li>
+<li class="leaf"><a href="/odihr/mandate" hreflang="en">Mandate</a></li>
+<li class="leaf"><a href="/odihr/what-is-the-human-dimension" hreflang="en">What is the human dimension?</a></li>
+<li class="leaf last"><a href="/odihr/458002" hreflang="en">Former ODIHR directors</a></li>
+</ul></li>
+<li class="expanded last"><a href="/odihr/what-we-do" hreflang="en" class="has-children">What we do</a><ul class="menu"><li class="leaf first"><a href="/odihr/countering-terrorism" hreflang="en">Countering terrorism</a></li>
+<li class="collapsed"><a href="/odihr/democracy" hreflang="en" class="has-children">Democratization</a></li>
+<li class="leaf"><a href="/odihr/education" hreflang="en">Education</a></li>
+<li class="leaf"><a href="/odihr/elections" hreflang="en">Elections</a></li>
+<li class="collapsed"><a href="/odihr/gender-equality" hreflang="en" class="has-children">Gender equality</a></li>
+<li class="collapsed"><a href="/odihr/human-rights" hreflang="en" class="has-children">Human rights and fundamental freedoms</a></li>
+<li class="leaf"><a href="/odihr/legislative-support" hreflang="en">Legislative support</a></li>
+<li class="leaf"><a href="/odihr/migration" title="&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+" hreflang="en">Migration</a></li>
+<li class="leaf"><a href="/odihr/roma-and-sinti" hreflang="en">Roma and Sinti</a></li>
+<li class="leaf"><a href="/odihr/rule-of-law" hreflang="en">Rule of law</a></li>
+<li class="collapsed last"><a href="/odihr/tolerance-and-non-discrimination" title="&amp;nbsp;
+
+&amp;nbsp;
+
+&amp;nbsp;
+" hreflang="en" class="has-children">Tolerance and non-discrimination</a></li>
+</ul></li>
+</ul></li>
+<li class="collapsed"><a href="/representative-on-freedom-of-media" hreflang="en" class="has-children">Representative on Freedom of the Media</a></li>
+<li class="collapsed"><a href="/cca" hreflang="en" class="has-children">Court of Conciliation and Arbitration</a></li>
+<li class="leaf"><a href="/oceea/eef" hreflang="en">Economic and Environmental Forum</a></li>
+<li class="collapsed"><a href="/mg" hreflang="en" class="has-children">Minsk Group</a></li>
+<li class="collapsed last"><a href="/secretariat" hreflang="en" class="has-children">Secretariat</a></li>
+</ul>  </div>
+</aside>
+  </div>
+
+  
+  </div>
+<aside class="osce-box hp2015-news mobile osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-views osce-box-taxonomy_news osce-borderless">
+  <header class="osce-box-header">
+              <h2 class="osce-box-title"><span>News &amp; Events</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="view view-taxonomy-news view-id-taxonomy_news view-display-id-embed_2 view-dom-id-2b4f3414930fc5ef438e0f4617b4747f">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/odihr/509498">Closure of Russian Memorial organizations of grave concern, OSCE Human Rights Head says</a></span>
+  </div>
+  
+  <span class="views-field-field-location-value">
+                <span class="field-content">WARSAW</span>
+  </span>
+      <span class="views-field-field-date-location-separator">, </span>  
+  <span class="views-field-field-date-value">
+                <span class="field-content"><span class="date-display-single">29 December 2021</span></span>
+  </span>
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/odihr/elections/508976">Moldova early parliamentary elections 2021: OSCE/ODIHR election observation mission final report</a></span>
+  </div>
+  
+  <span class="views-field-field-date-value">
+                <span class="field-content"><span class="date-display-single">22 December 2021</span></span>
+  </span>
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/press-releases?filters=+im_taxonomy_vid_1:(24)">View all News</a>    </div>
+  
+  
+</div>   </div>
+</aside>
+<aside class="osce-box hp2015-events mobile osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-views_panes osce-box-taxonomy_upcoming_events-panel_pane_6 osce-borderless">
+  <header class="osce-box-header">
+              </header>
+  <div class="osce-box-content ">
+    <div class="view view-taxonomy-upcoming-events view-id-taxonomy_upcoming_events view-display-id-panel_pane_6 view-dom-id-c7e926c0e3be1a5cd8a51cd187b6b122">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field-nothing">
+                <span class="field-content"><div class="date-box date-status-upcoming">
+<span class="month"><span class="date-display-start">21</span><span class="date-display-separator"> - </span><span class="date-display-end">25</span></span><span class="day"><span class="date-display-single">March</span></span>
+</div></span>
+  </div>
+  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/odihr/504754">Young Policy Advisers Course</a></span>
+  </div>
+  
+  <span class="views-field-field-event-date-value2">
+                <span class="field-content"><span class="date-display-single">21 March 2022</span></span>
+  </span>
+      <span class="views-field-field-date-location-separator">, </span>  
+  <span class="views-field-field-location-value">
+                <span class="field-content">online; should epidemiological conditions allow, the course will be held in Istanbul, Turkey</span>
+  </span>
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/events?filters=+im_taxonomy_vid_1:(24)+ds_field_event_date_end:([NOW/DAY-2HOUR%20TO%20*])&amp;solrsort=ds_field_event_date%20asc,ds_field_event_date_end%20asc&amp;rows=10">View all Events</a>    </div>
+  
+  
+</div>   </div>
+</aside>
+    </div>
+      <div class="content--content">
+    <div class="panel-pane pane-panels-mini pane-hp2015-featured-slider" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-views-panes pane-node-latest-stories-panel-pane-7 hp2015-images" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="view view-node-latest-stories view-id-node_latest_stories view-display-id-panel_pane_7 view-dom-id-fe4e46e796300e0ca1231a094f839ede">
+    
+  
+  
+      <div class="view-content">
+      <div class="">
+  <div
+    class="osce-slick osce-slick-sg-images"
+    data-slick-config="sg-images"
+    id="hp2015-images"
+    data-slick-navigates="hp2015-text">
+          <div class=" slick-row slick-row-0"><div class="osce-figure-wrapper osce-figure-">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-4">
+                <span class="field-content"><a href="/odihr/hds_2021"><img src="https://www.osce.org/files/imagecache/hp2015_slider/f/images/content-ref/5/8/504289.jpg?1637051879" alt="" title="" width="620" height="336" class="imagecache imagecache-hp2015_slider imagecache-default imagecache-hp2015_slider_default"/></a></span>
+  </div>
+    </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-1"><div class="osce-figure-wrapper osce-figure-">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-4">
+                <span class="field-content"><a href="/odihr/annual-report/2020"><img src="https://www.osce.org/files/imagecache/hp2015_slider/f/images/content-ref/a/f/483548.PNG?1618477225" alt="" title="" width="620" height="336" class="imagecache imagecache-hp2015_slider imagecache-default imagecache-hp2015_slider_default"/></a></span>
+  </div>
+    </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-2"><div class="osce-figure-wrapper osce-figure-">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-4">
+                <span class="field-content"><a href="/odihr/493867"><img src="https://www.osce.org/files/imagecache/hp2015_slider/f/images/content-ref/8/b/493987_0.JPG?1627658196" alt="" title="" width="620" height="336" class="imagecache imagecache-hp2015_slider imagecache-default imagecache-hp2015_slider_default"/></a></span>
+  </div>
+    </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-3"><div class="osce-figure-wrapper osce-figure-">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-4">
+                <span class="field-content"><a href="/odihr/human-rights-states-of-emergency-covid19"><img src="https://www.osce.org/files/imagecache/hp2015_slider/f/images/content-ref/e/b/457573.PNG?1594982918" alt="" title="" width="620" height="336" class="imagecache imagecache-hp2015_slider imagecache-default imagecache-hp2015_slider_default"/></a></span>
+  </div>
+    </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-4"><div class="osce-figure-wrapper osce-figure-">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-4">
+                <span class="field-content"><a href="/odihr/484691"><img src="https://www.osce.org/files/imagecache/hp2015_slider/f/images/content-ref/9/b/485918.png?1620388138" alt="" title="" width="620" height="336" class="imagecache imagecache-hp2015_slider imagecache-default imagecache-hp2015_slider_default"/></a></span>
+  </div>
+    </div>
+      </div>
+</div>
+</div>
+      </div>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+  </div>
+<aside class="osce-box hp2015-content osce-box-style-plain osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-views_panes osce-box-node_latest_stories-panel_pane_8">
+  <header class="osce-box-header">
+          <div class="osce-box-label">Featured</div>
+              </header>
+  <div class="osce-box-content ">
+    <div class="view view-node-latest-stories view-id-node_latest_stories view-display-id-panel_pane_8 view-dom-id-3eef1aff47d50f7cc7a81881e4f10b41">
+    
+  
+  
+      <div class="view-content">
+      <div class="">
+  <div
+    class="osce-slick osce-slick-frontpage-text"
+    data-slick-config="frontpage-text"
+    id="hp2015-text"
+    data-slick-navigates="hp1015-images">
+          <div class=" slick-row slick-row-0">  
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><h2>Preventing and Combating Violence Against Women and Girls: Human Dimension Seminar </h2></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <span class="views-field-field-item-source-url-2">
+                <span class="field-content">The Human Dimension Seminar is an opportunity to discuss the implementation of relevant OSCE commitments and international human rights standards to combat violence against women and girls.</span>
+  </span>
+  
+  <span class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/hds_2021">Read more</a></span>
+  </span>
+</div>
+          <div class=" slick-row slick-row-1">  
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><h2>Democracy and Human Rights in the OSCE: The ODIHR Annual Report 2020 </h2></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <span class="views-field-field-item-source-url-2">
+                <span class="field-content">ODIHR’s 2020 annual report highlights its work over the last year to help countries across the OSCE strengthen their democratic institutions, safeguard human rights through strong civil society, and work towards equal and inclusive societies.</span>
+  </span>
+  
+  <span class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/annual-report/2020">Read more</a></span>
+  </span>
+</div>
+          <div class=" slick-row slick-row-2">  
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><h2>The Situation of Human Rights Defenders in Selected OSCE Participating States </h2></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <span class="views-field-field-item-source-url-2">
+                <span class="field-content">The report provides an analysis of findings of ODIHR's assessment visits to five countries in the OSCE region, undertaken as part of the first country-specific assessment cycle focused on human rights defenders.</span>
+  </span>
+  
+  <span class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/493867">Read more</a></span>
+  </span>
+</div>
+          <div class=" slick-row slick-row-3">  
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><h2>OSCE Human Dimension Commitments and State Responses to the COVID-19 Pandemic </h2></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content">This report is the culmination of ODIHR&#039;s efforts to respond to human rights challenges caused by the COVID-19 pandemic throughout the OSCE. It aims to help OSCE participating States learn lessons from the pandemic in order to strengthen their institutions ahead of future challenges.</div>
+  </div>
+  
+  <span class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </span>
+  
+  <span class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/human-rights-states-of-emergency-covid19">Read more</a></span>
+  </span>
+</div>
+          <div class=" slick-row slick-row-4">  
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><h2>Good lawmaking a cornerstone of democracy and human rights protection, OSCE leaders say </h2></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content">Transparent, inclusive lawmaking is vital to underpin democracies and the principles on which they are built, OSCE leaders said during an April 2021 meeting discussing topics such as the challenges and opportunities of crafting laws in periods of crisis.</div>
+  </div>
+  
+  <span class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </span>
+  
+  <span class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/484691">Read more</a></span>
+  </span>
+</div>
+      </div>
+</div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a href="/press-releases?filters=+im_taxonomy_vid_1:(24)">View all News</a><a href="/stories?institutions=24">View all Stories</a>    </div>
+  
+  
+</div>   </div>
+</aside>
+  </div>
+
+  
+  </div>
+<aside class="osce-box node-content html-formatted hp2015-body osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-node_body osce-box-node_body osce-borderless">
+  <header class="osce-box-header">
+              </header>
+  <div class="osce-box-content ">
+    <p>The OSCE Office for Democratic Institutions and Human Rights (ODIHR) provides support, assistance and expertise to participating States and civil society to promote democracy, rule of law, human rights and tolerance and non-discrimination. ODIHR observes elections, reviews legislation and advises governments on how to develop and sustain democratic institutions. The Office conducts training programmes for government and law-enforcement officials and non-governmental organizations on how to uphold, promote and monitor human rights.</p>
+  </div>
+</aside>
+<aside class="osce-box osce-grid-3col osce-grid-bordered osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-content_field osce-box-field_content_refs osce-borderless">
+  <header class="osce-box-header">
+          <div class="osce-box-label">OSCE Office for Democratic Institutions and Human Rights</div>
+              <h2 class="osce-box-title"><span>Highlights</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="field field-type-nodereference field-field-content-refs">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="https://www.osce.org/odihr/odihr-at-30"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/4/a/500788.png?1634155051" alt="On the thirtieth anniversary of its establishment, ODIHR convened a two-day conference to mark the many achievements of the last three decades, consider current challenges and opportunities, and discuss the Office’s role in continuing to help find solutions and promote democracy and human rights in the future. " title="On the thirtieth anniversary of its establishment, ODIHR convened a two-day conference to mark the many achievements of the last three decades, consider current challenges and opportunities, and discuss the Office’s role in continuing to help find solutions and promote democracy and human rights in the future. " width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/odihr-at-30">ODIHR: three decades and ready for the future - Democracy, human rights and security in the OSCE</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-description content-ref-description" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-text field-field-description">
+    <div class="field-items">
+            <div class="field-item odd">
+                    On the thirtieth anniversary of its establishment, ODIHR convened a two-day conference to mark the many achievements of the last three decades, consider current challenges and opportunities, and discuss the Office’s role in continuing to help find solutions and promote democracy and human rights in the future.         </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="https://www.osce.org/odihr/annual-report/2020"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/6/c/483542.png?1620377078" alt="" title="" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/annual-report/2020">2020 OSCE/ODIHR Annual Report</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="https://www.osce.org/odihr/covid-19"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/6/a/449674.jpg?1586246412" alt="" title="" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/covid-19">ODIHR activities related to the COVID-19 pandemic</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/human-rights-states-of-emergency-covid19"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/8/5/460981.PNG?1597922191" alt="" title="" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/human-rights-states-of-emergency-covid19">OSCE Human Dimension Commitments and State Responses to the Covid-19 Pandemic</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="https://www.osce.org/odihr/492934"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/7/b/492937_0.JPG?1626334534" alt="" title="" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/492934">Protecting Human Rights in Prisons while Preventing Radicalization Leading to Terrorism or Violence: A Guide for Detention Monitors</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="http://genderaudit.osce.org/"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/4/e/460996.PNG?1597922709" alt="" title="" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="http://genderaudit.osce.org"> Gender Audit Tool for Political Parties</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+        </div>
+</div>
+  </div>
+</aside>
+<aside class="osce-box osce-grid-3col osce-grid-bordered osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-content_field osce-box-field_odihr_meetings osce-borderless">
+  <header class="osce-box-header">
+              <h2 class="osce-box-title"><span>Special meetings</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="field field-type-nodereference field-field-odihr-meetings">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/hdim"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/2/a/123721.jpg?1517305633" alt="File photo: A participant at the 2009 Human Dimension Implementation Meeting in Warsaw " title="File photo: A participant at the 2009 Human Dimension Implementation Meeting in Warsaw " width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/hdim">Human Dimension Implementation Meetings</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/supplementary-human-dimension-meetings"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/content-ref/f/e/123720.jpg?1517305632" alt="" title="" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/supplementary-human-dimension-meetings">Supplementary Human Dimension Meetings</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="panel-pane pane-panels-mini pane-cref-pnlz-default" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="panel-pane pane-content-field pane-field-item-source" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/123718"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/41_xsmall_panorama/f/images/hires/5/f/161431.jpg?1517409119" alt="2015 OSCE Human Dimension Seminar opened with the plenary session on 1 June 2015 in Warsaw.  (OSCE/Piotr Markowski)" title="2015 OSCE Human Dimension Seminar opened with the plenary session on 1 June 2015 in Warsaw.  (OSCE/Piotr Markowski)" width="181" height="84" class="imagecache imagecache-41_xsmall_panorama"/></div></a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-item-source content-ref-title" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-link field-field-item-source">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/odihr/123718">Human Dimension Seminars</a>        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+        </div>
+        </div>
+</div>
+  </div>
+</aside>
+<aside class="osce-box  osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-views_panes osce-box-node_multimedia-panel_pane_1 osce-borderless">
+  <header class="osce-box-header">
+          <div class="osce-box-label">OSCE Office for Democratic Institutions and Human Rights</div>
+              <h2 class="osce-box-title"><span>Video &amp; Photography</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="view view-node-multimedia view-id-node_multimedia view-display-id-panel_pane_1 view-dom-id-d2e2eb8c3c8c514d64b8af2989f2b1dd">
+    
+  
+  
+      <div class="view-content">
+      <div class="">
+  <div
+    class="osce-slick osce-slick-related-stories"
+    data-slick-config="related-stories"
+    id=""
+    data-slick-navigates="">
+          <div class=" slick-row slick-row-0"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/elections/465156"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/3/5/465162.png?1601372988" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/elections/465156" 0="s:6:&quot;a:0:{}&quot;;">ODIHR Electoral Recommendations Database</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-1"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/gender-diversity-justice-video"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/d/1/454206.PNG?1591719809" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/gender-diversity-justice-video" 0="s:6:&quot;a:0:{}&quot;;">Gender, Diversity and Justice: ODIHR supports equal access to jobs in the judicial sector</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-2"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/495061"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/b/1/495064.JPG?1628754983" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/495061" 0="s:6:&quot;a:0:{}&quot;;">Freedom of religion or belief: a universal human right</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-3"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/450979"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/1/d/450985.jpg?1588078302" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/450979" 0="a:0:{}">Gender Audit Tool for Political Parties</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-4"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/448708"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/5/0/448711.JPG?1584533774" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/448708" 0="s:6:&quot;a:0:{}&quot;;">International Women&#039;s Day 2020 - Statement by ODIHR Director Ingibjörg Sólrún Gísladóttir</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-5"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/432425"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/5/2/432461.JPG?1569325578" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/432425" 0="s:6:&quot;a:0:{}&quot;;">Finding your voice: the OSCE&#039;s annual human rights conference</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-6"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/440924"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/0/2/440927.JPG?1575374077" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/440924" 0="s:6:&quot;a:0:{}&quot;;">16 Days of Activism against Gender-based Violence - Statement by ODIHR Director</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-7"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/node/440957/edit"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/a/9/440978.JPG?1575376985" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/node/440957/edit" 0="s:6:&quot;a:0:{}&quot;;">International Day for Tolerance - Statement by ODIHR Director</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-unknown multimedia-type-unknown-unknown"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-8"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/418400"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/b/b/418403.jpg?1556549249" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/418400" 0="s:6:&quot;a:0:{}&quot;;">Monitoring Freedom of Peaceful Assembly</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-9"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/411665"><img src="https://www.osce.org/files/imagecache/30_small/Rule%20of%20La31_2.JPG?1550249452" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/411665" 0="a:0:{}">Judges, prosecutors and the rule of law</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-10"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/392246"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/8/9/392252.JPG?1535731400" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/392246">Countering hate crime: working with the police</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-11"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/387587"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/0/1/389237.jpg?1532703283" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/387587">Legislationline.org - ODIHR´s Legislative Database</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-12"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/383385"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/d/8/383388.JPG?1528113896" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/383385">Addressing Anti-Semitism Through Education</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-13"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="http://www.osce.org/odihr/360866"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/7/8/360951.JPG?1517306383" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="http://www.osce.org/odihr/360866" 0="a:0:{}">Policing in Roma and Sinti Communities: The ODIHR Training</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-unknown multimedia-type-unknown-unknown"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-14"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="http://www.osce.org/odihr/countering-hate-crime-working-with-civil-society"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/2/1/333341.jpg?1517306292" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="http://www.osce.org/odihr/countering-hate-crime-working-with-civil-society" 0="a:0:{}">Countering hate crime: working with civil society</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-15"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/odihr-and-national-human-rights-institutions"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/0/7/316581.JPG?1517306246" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/odihr-and-national-human-rights-institutions" 0="a:0:{}">ODIHR and National Human Rights Institutions</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-16"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="http://www.osce.org/odihr/312101"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/4/a/312151.JPG?1517306232" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="http://www.osce.org/odihr/312101" 0="a:0:{}">ODIHR’s annual hate crime reporting</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-17"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/301506"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/30_small/f/images/hires/d/f/301501.jpg?1517413109" alt=" (OSCE)" title=" (OSCE)" width="300" height="200" class="imagecache imagecache-30_small"/></div></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/301506">Words into Action: Building Coalitions to Address Anti-Semitism, Intolerance and Discrimination</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-18"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/office-for-democratic-institutions-and-human-rights/306406"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/d/f/306411.JPG?1517306206" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/office-for-democratic-institutions-and-human-rights/306406" 0="a:0:{}">Countering hate crime: an overview of ODIHR’s work</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-19"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/262066"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/30_small/f/images/hires/a/d/261966.jpg?1517412014" alt="Evelin Kecskés, an activist from the Hungarian NGO Roma Civil Rights Movement, speaks about evections in the “Numbered Streets” area of Miskolc, Hungary. (OSCE/Bogdan ILIESIU and Andrei CRISAN)" title="Evelin Kecskés, an activist from the Hungarian NGO Roma Civil Rights Movement, speaks about evections in the “Numbered Streets” area of Miskolc, Hungary. (OSCE/Bogdan ILIESIU and Andrei CRISAN)" width="300" height="200" class="imagecache imagecache-30_small"/></div></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/262066" 0="s:6:&quot;a:0:{}&quot;;">The Numbered Streets: Roma Housing in Miskolc, Hungary</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-20"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/250731"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/7/f/250736.jpg?1517305999" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/250731" 0="a:0:{}">ODIHR&#039;s 25th anniversary celebrations</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-21"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/elections/216606"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/5/3/216611.png?1517305911" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/elections/216606">OSCE/ODIHR Short-Term Election Observers</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-22"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/elections/179516"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/8/8/179521.jpg?1517305837" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/elections/179516">Behind OSCE/ODIHR Election Observation Missions</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-23"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/171201"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/1/8/171206.jpg?1517305805" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/171201">Video: OSCE/ODIHR Youth Seminar, Belgrade, Serbia, 2 June 2015</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-24"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="http://bit.ly/1zoKcMv"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/f/0/154336.jpg?1517305762" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="http://bit.ly/1zoKcMv">Launch of the civil society project in Ukraine</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-unknown multimedia-type-unknown-unknown"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-25"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/144096"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/a/d/144101.jpg?1517305720" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/144096">Video: Hate crime training for civil society</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-26"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="/odihr/127087"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/4/f/127089.jpg?1517305669" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="/odihr/127087">Video: 2nd Youth Leadership Forum 2014</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+          <div class=" slick-row slick-row-27"><div class="osce-figure-wrapper osce-figure- osce-figure-captioned">
+  <div class="osce-figure">
+    <div class="osce-figure-content">
+        
+  <div class="views-field-field-item-source-url-1">
+                <span class="field-content"><a href="https://www.osce.org/odihr/grassroots-groups-turn-words-into-action-to-address-anti-Semitism-intolerance-and-discrimination"><img src="https://www.osce.org/files/imagecache/30_small/f/images/content-ref/4/e/302306.png?1517306183" alt="" title="" width="300" height="200" class="imagecache imagecache-30_small imagecache-default imagecache-30_small_default"/></a></span>
+  </div>
+  
+  <div class="views-field-field-item-source-url-2">
+                <span class="field-content"></span>
+  </div>
+    </div>
+          <div class="osce-figure-caption">
+          
+  <div class="views-field-field-item-source-url-3">
+                <span class="field-content"><a href="https://www.osce.org/odihr/grassroots-groups-turn-words-into-action-to-address-anti-Semitism-intolerance-and-discrimination" 0="a:0:{}">Grassroots Groups Turn Words into Action to Address Anti-Semitism, Intolerance and Discrimination</a></span>
+  </div>
+  
+  <div class="views-field-field-description-value">
+                <div class="field-content"></div>
+  </div>
+  
+  <div class="views-field-nothing">
+                <span class="field-content"><i class="multimedia-icon multimedia-type-video multimedia-type-video-Video"></i></span>
+  </div>
+      </div>
+      </div>
+</div>
+</div>
+      </div>
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+</aside>
+<div class="panel-pane pane-panels-mini pane-key-resources key-resources" >
+  
+  
+  
+  <div class="pane-content">
+    <aside class="osce-box osce-grid-wide osce-grid-bordered osce-box-borderless osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-content_field osce-box-field_links">
+  <header class="osce-box-header">
+          <div class="osce-box-label">OSCE Office for Democratic Institutions and Human Rights</div>
+              <h2 class="osce-box-title"><span>Key Resources</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="field field-type-link field-field-links">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/serbia/509426"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/f/7/141891.jpg?1517408728" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/serbia/509426" title=" (OSCE)" class="title">Serbia, Presidential and Early Parliamentary Elections, 3 April 2022: Needs Assessment Mission Report </a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/9/0/509426.pdf" title="Serbia, Presidential and Early Parliamentary Elections, 3 April 2022: Needs Assessment Mission Report " class="translation-link active" hreflang="en" data-nid="509426" data-title="Serbia, Presidential and Early Parliamentary Elections, 3 April 2022: Needs Assessment Mission Report " data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/508979"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/4/8/123799.jpg?1517408083" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/508979" title=" (OSCE)" class="title">Moldova, Early Parliamentary Elections, 11 July 2021: Final Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/0/5/508979.pdf" title="Moldova, Early Parliamentary Elections, 11 July 2021: Final Report" class="translation-link active" hreflang="en" data-nid="508979" data-title="Moldova, Early Parliamentary Elections, 11 July 2021: Final Report" data-language="en">English</a></li>
+<li class="node_translation_ru"><a href="/files/f/documents/0/d/509384.pdf" title="Республика Молдова, Досрочные Парламентские Выборы, 11 июля 2021 года: Итоговый отчет" class="translation-link" hreflang="ru" data-nid="508979" data-title="Moldova, Early Parliamentary Elections, 11 July 2021: Final Report" data-language="ru">Русский</a></li>
+<li class="node_translation_ro last"><a href="/files/f/documents/4/f/509387.pdf" title="Republica Moldova, Alegeri Parlamentare Anticipate, 11 iulie 2021: Raport final" class="translation-link" hreflang="ro" data-nid="508979" data-title="Moldova, Early Parliamentary Elections, 11 July 2021: Final Report" data-language="ro">Română</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/508898"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/0/e/183836.jpg?1517409689" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/508898" title=" (OSCE)" class="title">Portugal, Early Parliamentary Elections, 30 January 2022: Needs Assessment Mission Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/0/e/508898.pdf" title="Portugal, Early Parliamentary Elections, 30 January 2022: Needs Assessment Mission Report" class="translation-link active" hreflang="en" data-nid="508898" data-title="Portugal, Early Parliamentary Elections, 30 January 2022: Needs Assessment Mission Report" data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/508379"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/6/e/230491.png?1517411010" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/508379" title=" (OSCE)" class="title">Cyprus, Parliamentary Elections, 30 May: Final Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/c/5/508379_1.pdf" title="Cyprus, Parliamentary Elections, 30 May 2021: Final Report" class="translation-link active" hreflang="en" data-nid="508379" data-title="Cyprus, Parliamentary Elections, 30 May 2021: Final Report" data-language="en">English</a></li>
+<li class="node_translation_el last"><a href="/files/f/documents/c/7/509396.pdf" title="Κυπριακη Δημοκρατια Βουλευτικεσ Εκλογεσ, 30 Μαΐου 2021: Τελική Έκθεση" class="translation-link" hreflang="el" data-nid="508379" data-title="Cyprus, Parliamentary Elections, 30 May 2021: Final Report" data-language="el">Ελληνικά</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/kyrgyzstan/505840"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/b/0/177101.jpg?1517409557" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/kyrgyzstan/505840" title=" (OSCE)" class="title">Kyrgyzstan, Parliamentary Elections, 28 November 2021: Statement of Preliminary Findings and Conclusions</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/6/5/505840_0.pdf" title="Kyrgyzstan, Parliamentary Elections, 28 November 2021: Statement of Preliminary Findings and Conclusions" class="translation-link active" hreflang="en" data-nid="505840" data-title="Kyrgyzstan, Parliamentary Elections, 28 November 2021: Statement of Preliminary Findings and Conclusions" data-language="en">English</a></li>
+<li class="node_translation_ru"><a href="/files/f/documents/3/e/505942_0.pdf" title="Кыргызская Республика, Парламентские выборы, 28 ноября 2021 г.: Заявление о предварительных выводах и заключениях" class="translation-link" hreflang="ru" data-nid="505840" data-title="Kyrgyzstan, Parliamentary Elections, 28 November 2021: Statement of Preliminary Findings and Conclusions" data-language="ru">Русский</a></li>
+<li class="node_translation_ky last"><a href="/files/f/documents/9/6/505939.pdf" title="Kыргыз Республикасы, Парламенттик шайлоо, 28-ноябрь 2021-жыл: АЛДЫН АЛА ЖЫЙЫНТЫКТАР ЖАНА КОРУТУНДУЛАР БОЮНЧА БИЛДИРҮҮ" class="translation-link" hreflang="ky" data-nid="505840" data-title="Kyrgyzstan, Parliamentary Elections, 28 November 2021: Statement of Preliminary Findings and Conclusions" data-language="ky">Кыргызча</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/north-macedonia/502747"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/1/c/119763.jpg?1517407658" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/north-macedonia/502747" title=" (OSCE)" class="title">North Macedonia, Local Elections, Second Round, 31 October 2021: Statement of Preliminary Findings and Conclusions</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/8/6/502747.pdf" title="North Macedonia, Local Elections, Second Round, 31 October 2021: Statement of Preliminary Findings and Conclusions" class="translation-link active" hreflang="en" data-nid="502747" data-title="North Macedonia, Local Elections, Second Round, 31 October 2021: Statement of Preliminary Findings and Conclusions" data-language="en">English</a></li>
+<li class="node_translation_sq"><a href="/files/f/documents/e/2/502810.pdf" title="Republika e Maqedonisë së Veriut, Zgjedhjet lokale, Rrethi i dytë, 31 tetor 2021: DEKLARATË PËR GJETJET DHE PËRFUNDIMET PARAPRAKE" class="translation-link" hreflang="sq" data-nid="502747" data-title="North Macedonia, Local Elections, Second Round, 31 October 2021: Statement of Preliminary Findings and Conclusions" data-language="sq">Shqip</a></li>
+<li class="node_translation_mk last"><a href="/files/f/documents/4/d/502807.pdf" title="Република Северна Македонија, локални избори, втор круг, 31 октомври 2021 г.: ИЗЈАВА ЗА ПРЕЛИМИНАРНИ НАОДИ И ЗАКЛУЧОЦИ" class="translation-link" hreflang="mk" data-nid="502747" data-title="North Macedonia, Local Elections, Second Round, 31 October 2021: Statement of Preliminary Findings and Conclusions" data-language="mk">Македонски</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/georgia/502704"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/2/a/244146.png?1517411289" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/georgia/502704" title=" (OSCE)" class="title">Georgia, Local Elections, Second Round, 30 October 2021: Statement of Preliminary Findings and Conclusions</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/8/c/502704.pdf" title="Georgia, Local Elections, Second Round, 30 October 2021: Statement of Preliminary Findings and Conclusions" class="translation-link active" hreflang="en" data-nid="502704" data-title="Georgia, Local Elections, Second Round, 30 October 2021: Statement of Preliminary Findings and Conclusions" data-language="en">English</a></li>
+<li class="node_translation_ka last"><a href="/files/f/documents/f/f/502719_0.pdf" title="საქართველო, მუნიციპალიტეტის ორგანოთა არჩევნები, მეორე ტური  2021 წლის 30 ოქტომბერი: მოხსენება წინასწარი მიგნებებისა და დასკვნების შესახებ" class="translation-link" hreflang="ka" data-nid="502704" data-title="Georgia, Local Elections, Second Round, 30 October 2021: Statement of Preliminary Findings and Conclusions" data-language="ka">ქართული</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/armenia/502386"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/f/c/220671.png?1517410773" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/armenia/502386" title=" (OSCE)" class="title">Armenia, Early Parliamentary Elections, 20 June 2021: Final Report </a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/5/4/502386_0.pdf" title="Armenia, Early Parliamentary Elections, 20 June 2021: Final Report " class="translation-link active" hreflang="en" data-nid="502386" data-title="Armenia, Early Parliamentary Elections, 20 June 2021: Final Report " data-language="en">English</a></li>
+<li class="node_translation_hy last"><a href="/files/f/documents/2/0/508394.pdf" title="Հայաստանի Հանրապետություն, ԱԶԳԱՅԻՆ ԺՈՂՈՎԻ ԱՐՏԱՀԵՐԹ ԸՆՏՐՈՒԹՅՈՒՆՆԵՐ  20 հունիսի 2021թ.: Վերջնական զեկույց" class="translation-link" hreflang="hy" data-nid="502386" data-title="Armenia, Early Parliamentary Elections, 20 June 2021: Final Report " data-language="hy">Հայերեն</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/uzbekistan/502203"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/4/7/126817.jpg?1517408351" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/uzbekistan/502203" title=" (OSCE)" class="title">Uzbekistan, Presidential Election, 24 October 2021: Statement of Preliminary Findings and Conclusions</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/4/9/502203.pdf" title="Uzbekistan, Presidential Election, 24 October 2021: Statement of Preliminary Findings and Conclusions" class="translation-link active" hreflang="en" data-nid="502203" data-title="Uzbekistan, Presidential Election, 24 October 2021: Statement of Preliminary Findings and Conclusions" data-language="en">English</a></li>
+<li class="node_translation_ru"><a href="/files/f/documents/0/1/502236.pdf" title="МЕЖДУНАРОДНАЯ МИССИЯ ПО НАБЛЮДЕНИЮ ЗА ВЫБОРАМИ Республика Узбекистан – Президентские выборы, 24 октября 2021 г." class="translation-link" hreflang="ru" data-nid="502203" data-title="Uzbekistan, Presidential Election, 24 October 2021: Statement of Preliminary Findings and Conclusions" data-language="ru">Русский</a></li>
+<li class="node_translation_uz last"><a href="/files/f/documents/b/1/502239.pdf" title="САЙЛОВНИ КУЗАТУВЧИЛАР ХАЛҚАРО МИССИЯСИ Ўзбекистон Республикаси – Президент сайлови, 2021 йил 24 октябрь" class="translation-link" hreflang="uz" data-nid="502203" data-title="Uzbekistan, Presidential Election, 24 October 2021: Statement of Preliminary Findings and Conclusions" data-language="uz">O&#039;zbek</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/bulgaria/502110"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/2/2/122988.jpg?1517408020" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/bulgaria/502110" title=" (OSCE)" class="title">Bulgaria, Early Parliamentary Elections, 11 July 2021: Final Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/8/b/502110.pdf" title="Bulgaria, Early Parliamentary Elections, 11 July 2021: Final Report" class="translation-link active" hreflang="en" data-nid="502110" data-title="Bulgaria, Early Parliamentary Elections, 11 July 2021: Final Report" data-language="en">English</a></li>
+<li class="node_translation_bg last"><a href="/files/f/documents/9/4/504115.pdf" title="РЕПУБЛИКА БЪЛГАРИЯ, ПРЕДСРОЧНИ ИЗБОРИ ЗА НАРОДНО СЪБРАНИЕ, 11 ЮЛИ 2021: Окончателен доклад " class="translation-link" hreflang="bg" data-nid="502110" data-title="Bulgaria, Early Parliamentary Elections, 11 July 2021: Final Report" data-language="bg">Български</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/bulgaria/502104"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/2/2/122988.jpg?1517408020" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/bulgaria/502104" title=" (OSCE)" class="title">Bulgaria, Parliamentary Elections, 4 April 2021: Final Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/f/3/502104.pdf" title="Bulgaria, Parliamentary Elections, 4 April 2021: Final Report" class="translation-link active" hreflang="en" data-nid="502104" data-title="Bulgaria, Parliamentary Elections, 4 April 2021: Final Report" data-language="en">English</a></li>
+<li class="node_translation_bg last"><a href="/files/f/documents/5/0/504112.pdf" title="РЕПУБЛИКА БЪЛГАРИЯ, ИЗБОРИ ЗА НАРОДНО СЪБРАНИЕ, 4 АПРИЛ 2021: Oкончателен доклад" class="translation-link" hreflang="bg" data-nid="502104" data-title="Bulgaria, Parliamentary Elections, 4 April 2021: Final Report" data-language="bg">Български</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/mongolia/502083"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/b/2/237616.jpg?1517411159" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/mongolia/502083" title=" (OSCE)" class="title">Mongolia, Presidential Election, 9 June 2021: Final Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/8/7/502083.pdf" title="Mongolia, Presidential Election, 9 June 2021: Final Report" class="translation-link active" hreflang="en" data-nid="502083" data-title="Mongolia, Presidential Election, 9 June 2021: Final Report" data-language="en">English</a></li>
+<li class="node_translation_mn last"><a href="/files/f/documents/9/6/509063.pdf" title="МОНГОЛ УЛС ЕРӨНХИЙЛӨГЧИЙН СОНГУУЛ, 2021 оны 6 дугаар сарын 9 өдөр: АИХЭГ-ын Сонгууль ажиглах тусгай хорооны эцсийн тайлан" class="translation-link" hreflang="mn" data-nid="502083" data-title="Mongolia, Presidential Election, 9 June 2021: Final Report" data-language="mn">Монгол</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/north-macedonia/501259"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/1/c/119763.jpg?1517407658" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/north-macedonia/501259" title=" (OSCE)" class="title">North Macedonia, Local Elections, 17 October 2021: Statement of Preliminary Findings and Conclusions</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/e/0/501259_1.pdf" title="North Macedonia, Local Elections, 17 October 2021: Statement of Preliminary Findings and Conclusions" class="translation-link active" hreflang="en" data-nid="501259" data-title="North Macedonia, Local Elections, 17 October 2021: Statement of Preliminary Findings and Conclusions" data-language="en">English</a></li>
+<li class="node_translation_sq"><a href="/files/f/documents/4/2/501325.pdf" title="Republika e Maqedonisë së Veriut, Zgjedhjet lokale, 17 tetor 2021: DEKLARATË PËR GJETJET DHE PËRFUNDIMET PARAPRAKE" class="translation-link" hreflang="sq" data-nid="501259" data-title="North Macedonia, Local Elections, 17 October 2021: Statement of Preliminary Findings and Conclusions" data-language="sq">Shqip</a></li>
+<li class="node_translation_mk last"><a href="/files/f/documents/7/c/501322.pdf" title="Република Северна Македонија, локални избори, 17 октомври 2021г.: ИЗЈАВА ЗА ПРЕЛИМИНАРНИ НАОДИ И ЗАКЛУЧОЦИ" class="translation-link" hreflang="mk" data-nid="501259" data-title="North Macedonia, Local Elections, 17 October 2021: Statement of Preliminary Findings and Conclusions" data-language="mk">Македонски</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/georgia/499468"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/2/a/244146.png?1517411289" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/georgia/499468" title=" (OSCE)" class="title">Georgia, Local Elections, 2 October 2021: Statement of Preliminary Findings and Conclusions</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/f/d/499468_3.pdf" title="Georgia, Local Elections, 2 October 2021: Statement of Preliminary Findings and Conclusions" class="translation-link active" hreflang="en" data-nid="499468" data-title="Georgia, Local Elections, 2 October 2021: Statement of Preliminary Findings and Conclusions" data-language="en">English</a></li>
+<li class="node_translation_ka last"><a href="/files/f/documents/d/9/499477_2.pdf" title="საქართველო - მუნიციპალიტეტის ორგანოთა არჩევნები, 2021 წლის 2 ოქტომბერი: მოხსენება წინასწარი მიგნებებისა და დასკვნების შესახებ " class="translation-link" hreflang="ka" data-nid="499468" data-title="Georgia, Local Elections, 2 October 2021: Statement of Preliminary Findings and Conclusions" data-language="ka">ქართული</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/canada/496888"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/7/6/161556.jpg?1517409119" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/canada/496888" title=" (OSCE)" class="title">Canada, Early Federal Elections, 20 September 2021: Needs Assessment Mission Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/4/2/496888.pdf" title="Canada, Early Federal Elections, 20 September 2021: Needs Assessment Mission Report" class="translation-link active" hreflang="en" data-nid="496888" data-title="Canada, Early Federal Elections, 20 September 2021: Needs Assessment Mission Report" data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/norway/496369"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/a/0/333006.jpg?1517413906" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/norway/496369" title=" (OSCE)" class="title">Norway, Parliamentary Elections, 13 September 2021: Needs Assessment Mission Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/6/6/496369.pdf" title="Norway, Parliamentary Elections, 13 September 2021: Needs Assessment Mission Report" class="translation-link active" hreflang="en" data-nid="496369" data-title="Norway, Parliamentary Elections, 13 September 2021: Needs Assessment Mission Report" data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/iceland/495790"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/8/5/142046.jpg?1517408730" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/iceland/495790" title=" (OSCE)" class="title">Iceland, Parliamentary Elections, 25 September 2021: Needs Assessment Mission Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/8/e/495790.pdf" title="Iceland, Parliamentary Elections, 25 September 2021: Needs Assessment Mission Report" class="translation-link active" hreflang="en" data-nid="495790" data-title="Iceland, Parliamentary Elections, 25 September 2021: Needs Assessment Mission Report" data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/czech-republic/495787"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/6/1/139036.jpg?1517408664" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/czech-republic/495787" title=" (OSCE)" class="title">Czech Republic, Parliamentary Elections, 8-9 October 2021: Needs Assessment Mission Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/d/a/495787.pdf" title="Czech Republic, Parliamentary Elections, 8-9 October 2021: Needs Assessment Mission Report" class="translation-link active" hreflang="en" data-nid="495787" data-title="Czech Republic, Parliamentary Elections, 8-9 October 2021: Needs Assessment Mission Report" data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item odd">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/albania/493687"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/7/5/153631.jpg?1517408980" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/albania/493687" title=" (OSCE)" class="title">Albania, Parliamentary Elections, 25 April 2021: Final Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first"><a href="/files/f/documents/5/1/493687.pdf" title="Albania, Parliamentary Elections, 25 April 2021: Final Report" class="translation-link active" hreflang="en" data-nid="493687" data-title="Albania, Parliamentary Elections, 25 April 2021: Final Report" data-language="en">English</a></li>
+<li class="node_translation_sq last"><a href="/files/f/documents/4/c/495052.pdf" title="REPUBLIKA E SHQIPËRISË, ZGJEDHJET PARLAMENTARE, 25 prill 2021: Raporti Përfundimtar" class="translation-link" hreflang="sq" data-nid="493687" data-title="Albania, Parliamentary Elections, 25 April 2021: Final Report" data-language="sq">Shqip</a></li>
+</ul>  </div>
+  </div>
+        </div>
+              <div class="field-item even">
+                    <div class="link-item">
+    <div class="link-item-link">
+    <a href="/odihr/elections/germany/493567"><div class="osce-figure"><img src="https://www.osce.org/files/imagecache/50_thumb/f/images/hires/9/2/333506.jpg?1517413927" alt=" (OSCE)" title=" (OSCE)" width="75" height="100" class="imagecache imagecache-50_thumb"/></div></a><a href="/odihr/elections/germany/493567" title=" (OSCE)" class="title">Germany, Parliamentary Elections, 26 September 2021: Needs Assessment Mission Report</a>  </div>
+        <div class="link-item-type">
+    <span>
+      Report    </span>
+  </div>
+      <div class="link-translations">
+    <ul class="links"><li class="node_translation_en active first last"><a href="/files/f/documents/b/a/493567.pdf" title="Germany, Parliamentary Elections, 26 September 2021: Needs Assessment Mission Report" class="translation-link active" hreflang="en" data-nid="493567" data-title="Germany, Parliamentary Elections, 26 September 2021: Needs Assessment Mission Report" data-language="en">English</a></li>
+</ul>  </div>
+  </div>
+        </div>
+        </div>
+</div>
+  </div>
+</aside>
+<div class="panel-pane pane-button" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/resources/publications?filters=im_taxonomy_vid_1:(24)" class="call2action">See all publications</a>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-button" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/resources/documents?filters=im_taxonomy_vid_1:(24)" class="call2action">See all documents</a>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-button" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/resources/multimedia?filters=im_taxonomy_vid_1:(24)" class="call2action">See all multimedia</a>  </div>
+
+  
+  </div>
+  </div>
+
+  
+  </div>
+                                                                            </div>
+      <div class="content--sidebar-bottom">
+      <aside class="osce-box  osce-box-style-white osce-box-collapse-never osce-box-gridlayout-nogrid osce-box-panels_mini osce-box-contact_gmap osce-borderless">
+  <header class="osce-box-header">
+          <div class="osce-box-label">OSCE Office for Democratic Institutions and Human Rights</div>
+              <h2 class="osce-box-title"><span>How to find us</span></h2>
+          </header>
+  <div class="osce-box-content ">
+    <div class="panel-pane pane-custom pane-1" >
+  
+  
+  
+  <div class="pane-content">
+    <iframe allowfullscreen="" frameborder="0" height="150" src="https://www.google.com/maps/embed/v1/place?q=52.247004,21.010353&key=AIzaSyCRwONhlU6maY40VPcJF85HfRJ7_ZYlpr4&language=en&zoom=14" style="border:0" width="300"></iframe>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-content-field pane-field-contacts" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="field field-type-nodereference field-field-contacts">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="panel-display panel-1col clear-block" >
+  <div class="panel-panel panel-col">
+    <div><strong>OSCE Office for Democratic Institutions and Human Rights</strong><div></div>
+<div>
+	Ul. Miodowa 10</div>
+<div>
+	00-251 Warsaw</div>
+<div>
+	</div>
+Poland
+<div class="field field-type-phone field-field-telephone">
+    <div class="field-items">
+            <div class="field-item odd">
+                    Office: +48 22 520 06 00        </div>
+              <div class="field-item even">
+                    Fax: +48 22 520 06 05        </div>
+        </div>
+</div>
+<div class="field field-type-email field-field-email">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="mailto:office@odihr.pl">office@odihr.pl</a>        </div>
+        </div>
+</div>
+</div>
+  </div>
+</div>
+        </div>
+        </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+</aside>
+<div class="panel-pane pane-contact-link" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/odihr/contacts" class="call2action">View all Contacts</a>  </div>
+
+  
+  </div>
+    </div>
+    </div>
+  </div>
+
+  
+  </div>
+    </div>
+  </div>
+
+  <div class="site--footer--wrapper">
+    <div class="site--footer">
+      <div class="panel-pane pane-block pane-menu-menu-footer-navigation footer--navigation" >
+  
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first"><a href="/" hreflang="en">Home</a></li>
+<li class="leaf"><a href="/contacts" hreflang="en">Contacts</a></li>
+<li class="leaf"><a href="/contacts/report-wrongdoing" hreflang="en">Report wrongdoing</a></li>
+<li class="leaf"><a href="/about/sitemap" hreflang="en">Sitemap</a></li>
+<li class="leaf"><a href="https://jobs.osce.org/" hreflang="en">Employment</a></li>
+<li class="leaf"><a href="/osce-social-media" hreflang="en">Social media</a></li>
+<li class="leaf"><a href="/about" hreflang="en">About this website</a></li>
+<li class="leaf"><a href="https://procurement.osce.org" hreflang="en">Procurement</a></li>
+<li class="leaf"><a href="/about/terms-of-use" hreflang="en">Terms of Use</a></li>
+<li class="leaf last"><a href="/contacts/webmaster" hreflang="en">Feedback</a></li>
+</ul>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-subscription footer--signup" >
+  
+      <h2 class="pane-title"><span>Subscribe to OSCE</span></h2>
+  
+  
+  <div class="pane-content">
+    <form action="/odihr"  accept-charset="UTF-8" method="post" id="osce-panes-get-subscription-sign-up-form">
+<div><div  class="form-item form-item-labeled" id="edit-email-wrapper">
+      <label  for="edit-email">E-mail: </label>
+    <input type="text" maxlength="128" name="email" id="edit-email" size="60" value="" class="form-text" />  </div>
+<input type="submit" name="op" id="edit-submit" value="Sign Up"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-Z-IzX6dgNXmJgPYXdHRJhrCeM1WEQ1xWtVR6Ny9lhAE" value="form-Z-IzX6dgNXmJgPYXdHRJhrCeM1WEQ1xWtVR6Ny9lhAE"  />
+<input type="hidden" name="form_id" id="edit-osce-panes-get-subscription-sign-up-form" value="osce_panes_get_subscription_sign_up_form"  />
+
+</div></form>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-cio-logo footer--chairmanship" >
+  
+      <h2 class="pane-title">Chairmanship</h2>
+  
+  
+  <div class="pane-content">
+    <a class="chairmanship-footer chairmanship-footer-2021" href="/chairmanship">Chairmanship</a>  </div>
+
+  
+  </div>
+    </div>
+  </div>
+
+</div>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"gov-bam.nr-data.net","licenseKey":"ac1e88bca1","applicationID":"93306740","transactionName":"MVRWbUFTWhBSAUZcCwgedVpHW1sNHBJTUgE5XFVXUlVREWwMXVEBOUddXEQ=","queueTime":0,"applicationTime":601,"atts":"HRNBGwlJSU8RAxAPHxtM","errorBeacon":"gov-bam.nr-data.net","agent":""}</script></body>
+</html>
